@@ -1,48 +1,134 @@
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home | SaFaRanY.com</title>
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- core CSS -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/animate.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/prettyPhoto.css" rel="stylesheet">
+    <link href="/bootstrap/css/main.css" rel="stylesheet">
+    <link href="/bootstrap/css/responsive.css" rel="stylesheet">
+</head><!--/head-->
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<?php
+    $authen = Zend_Auth::getInstance();
+    $storage = $authen->getStorage();
+    $session_read = $storage->read();
+    $facebook_session = new Zend_Session_Namespace('facebook');
 
+    if(empty($session_read) && empty($facebook_session->name)){
+        echo '<header id="header">
+    <nav class="navbar navbar-inverse" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">SaFaRnY.com</a>
+            </div>
 
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
+            <div class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Destinations <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">Egypt</a></li>
+                            <li><a href="">Italy</a></li>
+                            <li><a href="">Canada</a></li>
+                            <li><a href="">Turkey</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/user/login">Login</a></li>
+                    <li><a href="#">SignUp</a></li>
+                </ul>
+            </div>
+        </div><!--/.container-->
+    </nav><!--/nav-->
 
-        <p class="navbar-text" style="float:right;">
-            <?php
-            $auth = Zend_Auth::getInstance();
-            $storage = $auth->getStorage();
-            $sessionRead = $storage->read();
-            $facebook_session = new Zend_Session_Namespace('facebook');
+</header><!--/header-->';
+    }elseif(isset($facebook_session->name) && !empty($facebook_session->name)){
 
-            if(!empty($sessionRead)) {
-                $username = $sessionRead->user_name;
+        echo '<header id="header">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">SaFaRnY.com</a>
+            </div>
 
-                echo "Welcome " . $username. " ";
-                ?>
-                <a class="btn btn-default navbar-btn" href="<?php echo $this->baseUrl() ?>/user/logout">Logout</a>
+            <div class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Destinations <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">Egypt</a></li>
+                            <li><a href="">Italy</a></li>
+                            <li><a href="">Canada</a></li>
+                            <li><a href="">Turkey</a></li>
+                        </ul>
+                    </li>
+                    <li>'."Welcome ".$facebook_session->name.' <a href="/user/fblogout">Logout</a></li>
+                </ul>
+            </div>
+        </div><!--/.container-->
+    </nav><!--/nav-->
 
-                <?php
-            }elseif(isset($facebook_session->name)) {
-                echo "Welcome " . $facebook_session->name . " ";
+</header><!--/header-->';
 
-                ?>
+    }elseif(isset($session_read) && !empty($session_read)){
 
-                <a class="btn btn-default navbar-btn" href="<?php echo $this->baseUrl; ?>/user/fblogout"> Logout</a>
-                <?php
-            }
-            ?>
-        </p>
+        $username = $session_read->user_name;
+        echo '<header id="header">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">SaFaRnY.com</a>
+            </div>
 
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Zend-OpenSource</a>
-        </div>
-    </div>
-</nav>
+            <div class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Destinations <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">Egypt</a></li>
+                            <li><a href="">Italy</a></li>
+                            <li><a href="">Canada</a></li>
+                            <li><a href="">Turkey</a></li>
+                        </ul>
+                    </li>
+                    <li>'."Welcome ".$username.' <a href="/user/logout">Logout</a></li>
+                </ul>
+            </div>
+        </div><!--/.container-->
+    </nav><!--/nav-->
+
+</header><!--/header-->';
+    }
+
+?>
+
 
 <?php echo $this->layout()->content; ?>
-

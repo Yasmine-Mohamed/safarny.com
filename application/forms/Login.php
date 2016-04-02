@@ -30,7 +30,7 @@ class Application_Form_Login extends Zend_Form
 
         //Submit Button
         $submit = new Zend_Form_Element_Submit('Sign In');
-        $submit->setAttrib('class','btn btn-primary btn-block');
+        $submit->setAttrib('class','btn btn-info btn-block');
 
         $this->addElements(array(
             $username,

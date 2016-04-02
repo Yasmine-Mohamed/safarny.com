@@ -74,6 +74,7 @@ class UserController extends Zend_Controller_Action
         // action body
         $authen_adapter = Zend_Auth::getInstance();
         $authen_adapter->clearIdentity();
+        $this->redirect();
 
     }
 
