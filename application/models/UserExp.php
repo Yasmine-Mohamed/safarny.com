@@ -8,5 +8,9 @@ class Application_Model_UserExp extends Zend_Db_Table_Abstract
         return $this->fetchAll("city_id = $city_id")->toArray();
     }
 
+    public function getExperience($exp_id){
+        return $this->find($exp_id)->toArray();
+    }
+
 }
 
