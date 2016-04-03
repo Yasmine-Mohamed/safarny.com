@@ -1,4 +1,27 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>City</b> and script/action name <b>listcity</b></p>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+	<div class="container">
+		<h1><?php echo $this->city['city_name']; ?></h1>
+		<pre><?php echo $this->city['description'] ?></pre>
+		<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+	</div>
+</div>
+
+<div class="container">
+	<!-- Example row of columns -->
+
+	<div class="row">
+		<?php
+
+			foreach($this->experiences as $expereince){
+				echo '<div class="col-md-4">
+			<h2>Username</h2>
+			<pre>'.$expereince['post'].'</pre>
+			<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+			</div>';
+			}
+
+		?>
+	</div>
 </div>
