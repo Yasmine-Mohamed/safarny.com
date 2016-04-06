@@ -12,11 +12,10 @@ class Application_Model_Car extends Zend_Db_Table_Abstract
     ));
 
 			public function find_all_car_reservations($user_id)  
-			{
+				{
      	
      			return $this->fetchAll("user_id=$user_id")->toArray();	
 			}
-
 
 			public function find_city_name ($user_id)
     				{
@@ -29,7 +28,6 @@ class Application_Model_Car extends Zend_Db_Table_Abstract
         				# code...
         			}
         								//var_dump($cityName);   
-
         			return $cityName;
 
 

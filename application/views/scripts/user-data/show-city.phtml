@@ -1,4 +1,21 @@
-<br /><br />
+<br /><br /><br><br /><br /><br>
 <div id="view-content">
-	<p>View script for controller <b>UserData</b> and script/action name <b>showCity</b></p>
+<table class="table table-striped table-bordered table-hover info text-info ">
+
+<tr>
+	<th><?php echo $this->show_country_name[0]['country_name']; ?></th>
+</tr>
+<?php
+$i=0;
+foreach($this->show_city_country as $key => $value)
+{
+echo "<tr>".
+
+"<td>" . $value["city_name"] . "</td> 
+
+
+</tr>";
+$i=$i+1;}
+?>
+</table>
 </div>

@@ -10,6 +10,12 @@ class Application_Model_Hotel extends Zend_Db_Table_Abstract
         'refColumns'=>array('hotel_id'),
         'onDelete'=>'cascade'
 
+    ),'cities'=>array(
+        'columns'=>array('city_id'),
+        'refTableClass'=>'Application_Model_City',
+        'refColumns'=>array('city_id'),
+        'onDelete'=>'cascade'
+
     ));
 
  	     		public function find_hotel_reservations($user_id)  
@@ -30,6 +36,21 @@ class Application_Model_Hotel extends Zend_Db_Table_Abstract
         				# code...
         			}
         			return $hotelName;
+
+
+	    			}
+	    		  		public function find_city_hotel($user_id)
+    				{
+     				   // return zend row object
+
+        			$all = $this->fetchAll("user_id=$user_id");
+        			$hotelName=[];
+   					foreach($all as $i => $row)
+					{	    	
+					$cityHotel[] = $row->findParentRow('Application_Model_City')->toArray();
+        				# code...
+        			}
+        			return $cityHotel;
 
 
 	    			}
