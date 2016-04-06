@@ -12,7 +12,6 @@ class Application_Form_SignUp extends Zend_Form
 
         //Username
         $username = new Zend_Form_Element_Text('username');
-        $username->setLabel('Username: ');
         $username->setAttribs(array(
             'placeholder' => 'Username',
             'class' => 'form-control',
@@ -22,7 +21,6 @@ class Application_Form_SignUp extends Zend_Form
 
         //Email
         $email = new Zend_Form_Element_Text('email');
-        $email->setLabel('Email: ');
         $email->setAttribs(array(
             'class' => 'form-control',
             'placeholder' => 'Email Address'
@@ -31,7 +29,6 @@ class Application_Form_SignUp extends Zend_Form
 
         //Password
         $password = new Zend_Form_Element_Password('password');
-        $password->setLabel('Password: ');
         $password->setAttribs(array(
             'class' => 'form-control',
             'placeholder' => 'Password'
@@ -40,7 +37,6 @@ class Application_Form_SignUp extends Zend_Form
 
         //Confirm Password
         $c_password = new Zend_Form_Element_Password('c_password');
-        $c_password->setLabel('Confirm Password: ');
         $c_password->setAttribs(array(
             'class' => 'form-control',
             'placeholder' => 'Password Again'

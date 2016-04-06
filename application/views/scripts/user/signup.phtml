@@ -12,25 +12,23 @@ if(isset($this->errorMessage)){
 
 <br>
 <br>
-
-<div class="container-fluid">
+<body style="background-image: url('/bootstrap/images/paris.jpg')">
+<div class="container">
 
 	<div class="row">
 		<div class="col-lg-offset-3 col-lg-6">
+			<br><br>
 			<form method="post">
 				<?php
 				echo $this->signUp_form->getElement('username');
-				echo '</br>';
 				echo $this->signUp_form->getElement('email');
-				echo '</br>';
 				echo $this->signUp_form->getElement('password');
-				echo '</br>';
 				echo $this->signUp_form->getElement('c_password');
-				echo '</br>';
 				echo $this->signUp_form->getElement('SignUp');
 				?>
 			</form>
 		</div>
 	</div>
+</body>
 
 
