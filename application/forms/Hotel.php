@@ -2,6 +2,7 @@
 
 class Application_Form_Hotel extends Zend_Form
 {
+    public $city_id=0;
 
     public function init()
     {
@@ -15,20 +16,11 @@ class Application_Form_Hotel extends Zend_Form
 
         $id = new Zend_Form_Element_Hidden('hotelreservation_id');
 
-        $city_id=1;
+
         //$city_id=$_GET['city_id'];
 
        //INSERTION OF HOTEL_ID IN DATABASE
 
-        $hotelname_obj= new Application_Model_HotelName();
-        $allHotels=$hotelname_obj->listHotels($city_id);
-        $hotel_id = new Zend_Form_Element_Select('hotel_id');
-        $hotel_id->setAttribs(Array('class'=>'form-control','placeholder'=>'Search For Hotel'));
-        foreach($allHotels as $key=>$value)
-        {
-            $hotel_id->addMultiOption($value['hotel_id'], $value['hotel_name']);
-
-        }
 
 
 
@@ -63,7 +55,7 @@ class Application_Form_Hotel extends Zend_Form
         addMultiOption('2','2 Adults')->
         addMultiOption('3','3 Adults')->addMultiOption('4','4 Adults');
         //to be able to submit form
-        $submit=new Zend_Form_Element_Submit('Search Hotels');
+        $submit=new Zend_Form_Element_Submit('ReserveHotels');
         $submit->setAttribs(Array(
 
             'class'=>'btn btn-block btn-lg btn-success'
@@ -71,10 +63,38 @@ class Application_Form_Hotel extends Zend_Form
 
 
 
-        $this->addElements(array($hotel_id,$date_from,$date_to,$members,$submit));
+        $this->addElements(array($date_from,$date_to,$members,$submit));
 
     }
 
+    public function setCityid($city_id){
+        $this->city_id = $city_id;
+    }
 
+    public function setHotels(){
+
+        $hotelname_obj= new Application_Model_HotelName();
+        $allHotels=$hotelname_obj->listHotels($this->city_id);
+        $hotel_id = new Zend_Form_Element_Select('hotel_id');
+        $hotel_id->setAttribs(Array('class'=>'form-control','placeholder'=>'Search For Hotel'));
+        foreach($allHotels as $key=>$value)
+        {
+            $hotel_id->addMultiOption($value['hotel_id'], $value['hotel_name']);
+
+        }
+
+        $hotel_id->setRequired();
+
+
+
+
+
+
+
+
+        $this->addElement($hotel_id);
+
+
+    }
 }
 

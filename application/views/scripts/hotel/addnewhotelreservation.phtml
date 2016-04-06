@@ -5,7 +5,26 @@
     <div class="row">
         <div class="col-lg-offset-4 col-lg-4">
 
-            <?php echo $this->hotel_form;?>
+            <form method="post" action="">
+
+                <input type="hidden" name="city_id" value="<?php echo $this->city_id ; ?>">
+                <?php
+                    echo $this->hotel_form->getElement('hotel_id');
+                    echo $this->hotel_form->getElement('date_from');
+                    echo $this->hotel_form->getElement('date_to');
+                    echo $this->hotel_form->getElement('members');
+                    echo $this->hotel_form->getElement('ReserveHotels');
+
+
+
+
+
+
+                ?>
+
+            </form>
+
+
         </div>
 
     </div>

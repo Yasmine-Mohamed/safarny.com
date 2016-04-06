@@ -4,8 +4,20 @@
     <h2  align="center"  style="color:blue;"><font size="7">Car Rental</font></h2>
     <div class="row">
         <div class="col-lg-offset-4 col-lg-4">
+            <form method="post" action="">
 
-            <?php echo $this->car_form;?>
+                <input type="hidden" name="city_id" value="<?php echo $this->city_id ; ?>">
+                <?php
+                echo $this->car_form->getElement('pickup_location');
+                echo $this->car_form->getElement('date_from');
+                echo $this->car_form->getElement('date_to');
+                echo $this->car_form->getElement('GetYourQuote');
+
+                ?>
+
+            </form>
+
+
         </div>
 
     </div>

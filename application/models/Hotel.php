@@ -11,11 +11,11 @@ class Application_Model_Hotel extends Zend_Db_Table_Abstract
 
 
     //add a hotel reservation in database
-    function addNewHotelReservation($hotelData,$user_id,$city_id)
+    function addNewHotelReservation($hotelData,$user_id)
     {
         $row = $this->createRow();
 
-        $row->city_id = $city_id;
+        $row->city_id = $hotelData['city_id'];
         $row->user_id =$user_id;
         $row->hotel_id = $hotelData['hotel_id'];
 

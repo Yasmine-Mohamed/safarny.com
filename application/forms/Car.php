@@ -2,6 +2,7 @@
 
 class Application_Form_Car extends Zend_Form
 {
+    public $city_id=0;
 
     public function init()
     {
@@ -19,20 +20,6 @@ class Application_Form_Car extends Zend_Form
 
 
 
-        $city_id=1;
-
-        $pickuplocation_obj= new Application_Model_Location();
-        $allLocations=$pickuplocation_obj->listLocations($city_id);//or the name of the function
-  //      ahmed created
-        $pickup_location= new Zend_Form_Element_Select('pickup_location');
-        $pickup_location->setAttribs(Array('class'=>'form-control'));
-        foreach($allLocations as $key=>$value)
-        {
-            $pickup_location->addMultiOption($value['location_name'], $value['location_name']);
-        }
-
-        $pickup_location->setRequired();
-        //pick time insertion in database via form
 
         $date_from= new Zend_Form_Element_Text('date_from');
         $date_from->setAttribs(Array(
@@ -65,12 +52,41 @@ class Application_Form_Car extends Zend_Form
             'class'=>'btn btn-block btn-lg btn-success'
         ));
 
-
-        $this->addElements(array($pickup_location,$date_from,$date_to,$submit));
+        $this->addElements(array($date_from,$date_to,$submit));
 
 
     }
 
+    public function setCityid($city_id){
+        $this->city_id = $city_id;
+    }
+
+    public function setLocations(){
+        $pickuplocation_obj= new Application_Model_Location();
+        $allLocations=$pickuplocation_obj->listLocations($this->city_id);
+        //or the name of the function
+        //ahmed created
+        $pickup_location= new Zend_Form_Element_Select('pickup_location');
+        $pickup_location->setAttribs(Array('class'=>'form-control'));
+
+
+
+
+        foreach($allLocations as $key=>$value){
+            $pickup_location->addMultiOption($value['location_name'], $value['location_name']);
+        }
+        $pickup_location->setRequired();
+        //pick time insertion in database via form
+
+
+        $this->addElement(
+          $pickup_location
+        );
+    }
+
+
 
 }
+
+
 
