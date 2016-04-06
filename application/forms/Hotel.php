@@ -6,29 +6,31 @@ class Application_Form_Hotel extends Zend_Form
     public function init()
     {
         /* Form Elements & Other Definitions Here ... */
+
         // to set submission method
+
         $this->setMethod('POST');
 
         //defining form elements
 
-        $id = new Zend_Form_Element_Hidden('hotel_id');
+        $id = new Zend_Form_Element_Hidden('hotelreservation_id');
 
-       // city_id insertion in database via form
+        $city_id=1;
+        //$city_id=$_GET['city_id'];
 
-        $city_id = new Zend_Form_Element_Text('city_id');
-        $city_id->setLabel('Find hotel');
-        $city_id->setAttribs(Array(
-            'placeholder'=>'Insert city id',
-            'class'=>'form-control',
+       //INSERTION OF HOTEL_ID IN DATABASE
 
-        ));
-        $city_id->setRequired();
+        $hotelname_obj= new Application_Model_HotelName();
+        $allHotels=$hotelname_obj->listHotels($city_id);
+        $hotel_id = new Zend_Form_Element_Select('hotel_id');
+        $hotel_id->setAttribs(Array('class'=>'form-control','placeholder'=>'Search For Hotel'));
+        foreach($allHotels as $key=>$value)
+        {
+            $hotel_id->addMultiOption($value['hotel_id'], $value['hotel_name']);
 
-        //hotel_name insertion in database via form
+        }
 
-        $hotel_name=new Zend_Form_Element_Text('hotel_name');
-        $hotel_name->setAttribs(Array('class'=>'form-control','placeholder'=>'Hotel name'));
-        $hotel_name->setRequired();
+
 
         //check in date insertion in database via form
 
@@ -36,21 +38,23 @@ class Application_Form_Hotel extends Zend_Form
 
         $date_from->setAttribs(Array(
 
-            'class'=>'form-control','readonly'=>'readonly'
+            'class'=>'form-control','readonly'=>'readonly','placeholder'=>'From',
         ));
         $date_from->setRequired();
 
         //check out date insertion in database via form
+
         $date_to= new Zend_Form_Element_Text('date_to');
         $date_to->setAttribs(Array(
 
 
-            'class'=>'form-control','readonly'=>'readonly'
+            'class'=>'form-control','readonly'=>'readonly','placeholder'=>'To'
         ));
         $date_to->setRequired();
 
 
         //insert number of members in database
+
         $members=new Zend_Form_Element_Select('members');
         $members->setAttribs(Array('class'=>'form-control'));
         $members->setRequired();
@@ -59,15 +63,15 @@ class Application_Form_Hotel extends Zend_Form
         addMultiOption('2','2 Adults')->
         addMultiOption('3','3 Adults')->addMultiOption('4','4 Adults');
         //to be able to submit form
-        $submit=new Zend_Form_Element_Submit('Submit');
+        $submit=new Zend_Form_Element_Submit('Search Hotels');
         $submit->setAttribs(Array(
 
-            'class'=>'btn btn-success'
+            'class'=>'btn btn-block btn-lg btn-success'
         ));
 
 
 
-        $this->addElements(array($city_id,$hotel_name,$date_from,$date_to,$members,$submit));
+        $this->addElements(array($hotel_id,$date_from,$date_to,$members,$submit));
 
     }
 

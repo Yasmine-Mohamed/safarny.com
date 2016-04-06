@@ -13,16 +13,22 @@ class HotelController extends Zend_Controller_Action
         // action body
     }
 
-//    public function listhotelsAction()
-//    {
-//        // action body
-//        $hotel_model = new Application_Model_Hotel();
-//        $this->view->hotels = $hotel_model->listHotels();
-//    }
+
 
     public function addnewhotelreservationAction()
     {
         // action body
+
+
+        $city_id=1;
+
+        //GETTING USER_ID FROM SESSION
+        $authen = Zend_Auth::getInstance();
+        $storage = $authen->getStorage();
+        $session_read = $storage->read();
+        $user_id = $session_read->user_id; //till login
+
+        //IDENTIFYING THE HOTEL FORM OBJECT
         $form= new Application_Form_Hotel();
 
         $request = $this->getRequest();
@@ -30,10 +36,13 @@ class HotelController extends Zend_Controller_Action
             if($form->isValid($request->getPost()))
             {
                 $user_model = new Application_Model_Hotel();
-                $user_model-> addNewHotelReservation($request->getParams());
+                $user_model-> addNewHotelReservation($request->getParams(),$user_id,$city_id);
+
             }
         }
         $this->view->hotel_form = $form;
+
+
     }
 
 

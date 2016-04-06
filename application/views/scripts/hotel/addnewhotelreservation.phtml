@@ -1,7 +1,18 @@
-<?php
+<div style="margin-top: 150px;"></div>
 
-echo $this->hotel_form;
-?>
+<div class="container">
+    <h2  align="center"  style="color:blue;"><font size="7">Find Hotel</font></h2>
+    <div class="row">
+        <div class="col-lg-offset-4 col-lg-4">
+
+            <?php echo $this->hotel_form;?>
+        </div>
+
+    </div>
+
+</div>
+
+
 <head>
     <link rel="stylesheet" href="/datepicker.css">
     <script src="/bootstrap-datepicker.js"></script>
@@ -10,7 +21,7 @@ echo $this->hotel_form;
 
 
 <script>
-
-    $('#date_from').datepicker('show');
-    $('#date_to').datepicker('show');
+    $('#date_from').datepicker();
+    $('#date_to').datepicker();
+   // $('#date_from').html("<span class='glyphicon glyphicon-ok form-control-feedback'></span>");
 </script>
