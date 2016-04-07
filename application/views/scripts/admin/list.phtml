@@ -1,0 +1,29 @@
+<br /><br />
+<body style="background-image: url('/bootstrap/images/paris.jpg')"
+<div class="container">
+	<table class="table">
+		<?php
+		echo "<tr>".
+		"<th>Country Name</th>".
+		"<th>Rate</th>".
+			"<th>Action</th>".
+			"<th></th>".
+		"</tr>";
+		foreach($this->countries as $key => $value)
+		{
+			echo
+				"<tr>".
+				"<td>" . $value['country_name'] . "</td>" .
+				"<td>" . $value['rate'] . "</td>" .
+				"<td> <a class='btn btn-danger' href='delete/cid/".$value['country_id']."'> Delete </a> </td>".
+				"<td> <a class='btn btn-warning' href='edit/cid/".$value['country_id']."'> Edit </a> </td>"
+				."</tr>";
+		}
+		?>
+	</table>
+</div>
+<?php
+echo $this->add_country;
+
+?>
+
