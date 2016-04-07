@@ -14,6 +14,13 @@
     <link href="/bootstrap/css/prettyPhoto.css" rel="stylesheet">
     <link href="/bootstrap/css/main.css" rel="stylesheet">
     <link href="/bootstrap/css/responsive.css" rel="stylesheet">
+<style>
+body{
+font-family:Helvetica,Arial,sans-serif;
+color:#333;
+background-color:#fff;
+}
+</style>
 </head><!--/head-->
 <body>
 
@@ -23,9 +30,10 @@
     $session_read = $storage->read();
     $facebook_session = new Zend_Session_Namespace('facebook');
 
-    if(empty($session_read) && empty($facebook_session->name)){
-        echo '<header id="header">
-    <nav class="navbar navbar-inverse fixed" role="banner">
+    if(empty($session_read) && empty($facebook_session->name)){?>
+  <header id="header">
+    <nav class="navbar navbar-inverse" role="banner">
+
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -39,14 +47,20 @@
 
             <div class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="">Home</a></li>
+                    <li class="active"><a href="/">Home</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Destinations <i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="">Egypt</a></li>
-                            <li><a href="">Italy</a></li>
-                            <li><a href="">Canada</a></li>
-                            <li><a href="">Turkey</a></li>
+                        <ul class="dropdown-menu" id="multiple">
+                      <?php
+                      $country_model = new Application_Model_Country ();
+                    $all_countries=$country_model->find_all_countries() ;
+            foreach($all_countries as $key => $value)
+ {
+    $i=$value['country_id'];
+
+    echo "<li id=$i><a href=".'"/user-data/show-country/cuid/'.$value['country_id'].'"'.">".$value['country_name']."</a></li>";
+}
+?>
                         </ul>
                     </li>
                     <li><a href="/user/login">Login</a></li>
@@ -56,10 +70,10 @@
         </div><!--/.container-->
     </nav><!--/nav-->
 
-</header><!--/header-->';
-    }elseif(isset($facebook_session->name) && !empty($facebook_session->name)){
+</header><!--/header-->
+ <?php }elseif(isset($facebook_session->name) && !empty($facebook_session->name)){
 
-        echo '<header id="header">
+        ?><header id="header">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="banner">
         <div class="container">
             <div class="navbar-header">
@@ -74,29 +88,32 @@
 
             <div class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="active"><a href="/">Home</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Destinations <i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="">Egypt</a></li>
-                            <li><a href="">Italy</a></li>
-                            <li><a href="">Canada</a></li>
-                            <li><a href="">Turkey</a></li>
+        <ul class="dropdown-menu">
+                             <?php
+                      $country_model = new Application_Model_Country ();
+        $all_countries=$country_model->find_all_countries() ;
+            foreach($all_countries as $key => $value)
+ {
+    echo "<li><a href=".'"/user-data/show-country/cuid/'.$value['country_id'].'"'.">".$value['country_name']."</a></li>";
+}
+?>
                         </ul>
-                    </li>
-                    <li>'."Welcome ".$facebook_session->name.' <a href="/user/fblogout">Logout</a></li>
-                </ul>
+                
             </div>
         </div><!--/.container-->
     </nav><!--/nav-->
 
-</header><!--/header-->';
+</header><!--/header-->
 
-    }elseif(isset($session_read) && !empty($session_read)){
+    <?php }elseif(isset($session_read) && !empty($session_read)){
 
-        $username = $session_read->user_name;
-        echo '<header id="header">
-    <nav class="navbar navbar-inverse" role="banner">
+        $username = $session_read->user_name;?>
+        <header id="header">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="banner">
+
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -110,27 +127,34 @@
 
             <div class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
+
+                    <li class="active"><a href="/">Home</a></li>
+                    <li class="active"><a href="/user-data/show-profile">profile</a></li>
+
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Destinations <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="">Egypt</a></li>
-                            <li><a href="">Italy</a></li>
-                            <li><a href="">Canada</a></li>
-                            <li><a href="">Turkey</a></li>
+                             <?php
+                      $country_model = new Application_Model_Country ();
+        $all_countries=$country_model->find_all_countries() ;
+            foreach($all_countries as $key => $value)
+ {
+    echo "<li><a href=".'"/user-data/show-country/cuid/'.$value['country_id'].'"'.">".$value['country_name']."</a></li>";
+}
+?>
                         </ul>
                     </li>
-                    <li>Welcome '.$username.'</li>
-                    <li><a href="/user/logout">Logout</a></li>
+                    <li> <?php echo "Welcome .$username "?><a href="/user/logout">Logout</a></li>
                 </ul>
             </div>
         </div><!--/.container-->
     </nav><!--/nav-->
 
-</header><!--/header-->';
-    }
+</header><!--/header-->
+    <?php }
 
+echo $this->layout()->content;
 ?>
-<?php echo $this->layout()->content; ?>
 </body>
 </html>
+

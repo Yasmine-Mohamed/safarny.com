@@ -2,6 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9944959-8892-40ce-8412-8d2a8b9e4b30" name="Default" comment="">
+<<<<<<< HEAD
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bootstrap/images/cities-wallpaper-149.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bootstrap/images/city1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bootstrap/images/city2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bootstrap/images/new.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bootstrap/images/new1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bootstrap/images/paris.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/forms/SignUp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/user/signup.phtml" />
+>>>>>>> c1a597de7ad587d2ba5db758f1b2b13f986da3ad
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/404.xcf" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/accordion1.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/ads/ad1.png" afterPath="" />
@@ -38,6 +49,10 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/gallery/gallery4.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/gallery/gallery5.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/gallery/gallery6.jpg" afterPath="" />
+<<<<<<< HEAD
+=======
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/gallery/index.jpeg" afterPath="" />
+>>>>>>> c1a597de7ad587d2ba5db758f1b2b13f986da3ad
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/ico/apple-touch-icon-114-precomposed.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/ico/apple-touch-icon-144-precomposed.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/ico/apple-touch-icon-57-precomposed.png" afterPath="" />
@@ -45,10 +60,13 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/ico/favicon.ico" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/image_bg.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/logo.png" afterPath="" />
+<<<<<<< HEAD
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/man1.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/man2.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/man3.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/man4.jpg" afterPath="" />
+=======
+>>>>>>> c1a597de7ad587d2ba5db758f1b2b13f986da3ad
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/map.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/partners/partner1.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/partners/partner2.png" afterPath="" />
@@ -111,6 +129,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/services/services5.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/services/services6.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/services/slider-bg.png" afterPath="" />
+<<<<<<< HEAD
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/slider/canada.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/slider/canada2.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/slider_one.jpg" afterPath="" />
@@ -148,6 +167,18 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap/images/new.jpg" afterPath="$PROJECT_DIR$/public/bootstrap/images/new.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap/images/new1.jpg" afterPath="$PROJECT_DIR$/public/bootstrap/images/new1.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap/images/paris.jpg" afterPath="$PROJECT_DIR$/public/bootstrap/images/paris.jpg" />
+=======
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/slider_one.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/tab1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/tab2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/images/testimonials1.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/user-data/index.jpeg" afterPath="$PROJECT_DIR$/application/views/scripts/user-data/index.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap/images/cities/bangkok.jpeg" afterPath="$PROJECT_DIR$/public/bootstrap/images/cities/bangkok.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap/images/cities/chiang.jpeg" afterPath="$PROJECT_DIR$/public/bootstrap/images/cities/chiang.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap/images/countries/thailand.jpeg" afterPath="$PROJECT_DIR$/public/bootstrap/images/countries/thailand.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap/images/slider/canada.jpg" afterPath="$PROJECT_DIR$/public/bootstrap/images/slider/canada.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap/images/slider/canada2.jpg" afterPath="$PROJECT_DIR$/public/bootstrap/images/slider/canada2.jpg" />
+>>>>>>> c1a597de7ad587d2ba5db758f1b2b13f986da3ad
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap/images/slider/canada3.jpg" afterPath="$PROJECT_DIR$/public/bootstrap/images/slider/canada3.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap/images/slider/egy1.jpg" afterPath="$PROJECT_DIR$/public/bootstrap/images/slider/egy1.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap/images/slider/italy.jpg" afterPath="$PROJECT_DIR$/public/bootstrap/images/slider/italy.jpg" />
@@ -167,6 +198,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap/images/top-6-cities/rome.jpg" afterPath="$PROJECT_DIR$/public/bootstrap/images/top-6-cities/rome.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap/images/top-6-cities/sydney_harbour (copy).jpg" afterPath="$PROJECT_DIR$/public/bootstrap/images/top-6-cities/sydney_harbour (copy).jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap/images/top-6-cities/sydney_harbour.jpg" afterPath="$PROJECT_DIR$/public/bootstrap/images/top-6-cities/sydney_harbour.jpg" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
@@ -176,11 +208,15 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.zfproject.xml" afterPath="$PROJECT_DIR$/.zfproject.xml" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+>>>>>>> c1a597de7ad587d2ba5db758f1b2b13f986da3ad
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/Bootstrap.php" afterPath="$PROJECT_DIR$/application/Bootstrap.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/configs/application.ini" afterPath="$PROJECT_DIR$/application/configs/application.ini" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/ErrorController.php" afterPath="$PROJECT_DIR$/application/controllers/ErrorController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/IndexController.php" afterPath="$PROJECT_DIR$/application/controllers/IndexController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/UserController.php" afterPath="$PROJECT_DIR$/application/controllers/UserController.php" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/forms/Login.php" afterPath="$PROJECT_DIR$/application/forms/Login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/forms/SignUp.php" afterPath="$PROJECT_DIR$/application/forms/SignUp.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" afterPath="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
@@ -190,6 +226,30 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/user/index.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/user/index.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/user/login.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/user/login.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/user/signup.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/user/signup.phtml" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/UserDataController.php" afterPath="$PROJECT_DIR$/application/controllers/UserDataController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/forms/Login.php" afterPath="$PROJECT_DIR$/application/forms/Login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/forms/Password.php" afterPath="$PROJECT_DIR$/application/forms/Password.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/forms/Signup.php" afterPath="$PROJECT_DIR$/application/forms/Signup.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" afterPath="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Car.php" afterPath="$PROJECT_DIR$/application/models/Car.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/City.php" afterPath="$PROJECT_DIR$/application/models/City.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Country.php" afterPath="$PROJECT_DIR$/application/models/Country.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Hotel.php" afterPath="$PROJECT_DIR$/application/models/Hotel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/HotelName.php" afterPath="$PROJECT_DIR$/application/models/HotelName.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/User.php" afterPath="$PROJECT_DIR$/application/models/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/error/error.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/error/error.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/index/index.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/index/index.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/user-data/car-rental.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/user-data/car-rental.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/user-data/index.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/user-data/index.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/user-data/reservation.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/user-data/reservation.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/user-data/show-city.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/user-data/show-city.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/user-data/show-country.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/user-data/show-country.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/user-data/show-profile.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/user-data/show-profile.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/user/edit-details.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/user/edit-details.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/user/index.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/user/index.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/user/login.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/user/login.phtml" />
+>>>>>>> c1a597de7ad587d2ba5db758f1b2b13f986da3ad
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/README.txt" afterPath="$PROJECT_DIR$/docs/README.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Facebook/Authentication/AccessToken.php" afterPath="$PROJECT_DIR$/library/Facebook/Authentication/AccessToken.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Facebook/Authentication/AccessTokenMetadata.php" afterPath="$PROJECT_DIR$/library/Facebook/Authentication/AccessTokenMetadata.php" />
@@ -260,6 +320,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Facebook/Url/UrlDetectionInterface.php" afterPath="$PROJECT_DIR$/library/Facebook/Url/UrlDetectionInterface.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Facebook/autoload.php" afterPath="$PROJECT_DIR$/library/Facebook/autoload.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/.htaccess" afterPath="$PROJECT_DIR$/public/.htaccess" />
+<<<<<<< HEAD
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/bootstrap/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bootstrap/css/main.css" afterPath="$PROJECT_DIR$/public/bootstrap/css/main.css" />
+>>>>>>> c1a597de7ad587d2ba5db758f1b2b13f986da3ad
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/application/controllers/IndexControllerTest.php" afterPath="$PROJECT_DIR$/tests/application/controllers/IndexControllerTest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/bootstrap.php" afterPath="$PROJECT_DIR$/tests/bootstrap.php" />
@@ -285,6 +350,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -383,6 +449,87 @@
               <folding>
                 <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#section#0;n#body#0;n#!!top" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="index.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/index/index.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.625">
+              <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+              <folding />
+>>>>>>> c1a597de7ad587d2ba5db758f1b2b13f986da3ad
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/bootstrap/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.3">
+              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+=======
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.25">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.625">
+              <caret line="155" column="30" selection-start-line="155" selection-start-column="30" selection-end-line="155" selection-end-column="30" />
+>>>>>>> c1a597de7ad587d2ba5db758f1b2b13f986da3ad
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="Country.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/Country.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.133333">
+              <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="37" selection-end-column="0" />
+=======
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-18.166666">
+              <caret line="179" column="5" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
+>>>>>>> c1a597de7ad587d2ba5db758f1b2b13f986da3ad
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="City.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/City.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.9">
+              <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+=======
+      <file leaf-file-name="application.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/configs/application.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Hotel.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/models/Hotel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.78417265">
+              <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -390,28 +537,9 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/bootstrap/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.3">
-              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Country.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Country.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.133333">
-              <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="37" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="City.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/City.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.9">
-              <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+            <state vertical-scroll-proportion="-24.416666">
+              <caret line="1747" column="14" selection-start-line="1747" selection-start-column="14" selection-end-line="1747" selection-end-column="14" />
+>>>>>>> c1a597de7ad587d2ba5db758f1b2b13f986da3ad
               <folding />
             </state>
           </provider>
@@ -447,6 +575,7 @@
         <option value="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
         <option value="$PROJECT_DIR$/public/bootstrap/css/main.css" />
         <option value="$PROJECT_DIR$/application/views/scripts/index/index.phtml" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/application/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/application/models/Admin.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/admin/list-countries.phtml" />
@@ -458,6 +587,14 @@
         <option value="$PROJECT_DIR$/application/views/scripts/admin/edit.phtml" />
         <option value="$PROJECT_DIR$/application/models/City.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/admin/list.phtml" />
+=======
+        <option value="$PROJECT_DIR$/public/bootstrap/css/main.css" />
+        <option value="$PROJECT_DIR$/application/models/User.php" />
+        <option value="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
+        <option value="$PROJECT_DIR$/application/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/application/configs/application.ini" />
+        <option value="$PROJECT_DIR$/application/models/Hotel.php" />
+>>>>>>> c1a597de7ad587d2ba5db758f1b2b13f986da3ad
       </list>
     </option>
   </component>
@@ -472,9 +609,15 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
+<<<<<<< HEAD
     <option name="y" value="-4" />
     <option name="width" value="1301" />
     <option name="height" value="772" />
+=======
+    <option name="y" value="67" />
+    <option name="width" value="1291" />
+    <option name="height" value="742" />
+>>>>>>> c1a597de7ad587d2ba5db758f1b2b13f986da3ad
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -621,6 +764,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="safarny.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="safarny" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="safarny.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="safarny" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -673,7 +860,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="safarny.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="safarny" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -779,8 +984,49 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="safarny.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="safarny" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="safarny.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="safarny" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+      <pane id="Scratches" />
+>>>>>>> c1a597de7ad587d2ba5db758f1b2b13f986da3ad
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -839,6 +1085,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
@@ -850,16 +1097,28 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+=======
+    <frame x="65" y="67" width="1291" height="742" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21843532" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> c1a597de7ad587d2ba5db758f1b2b13f986da3ad
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -874,10 +1133,19 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/models/Hotel.php</url>
+          <line>15</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/public/bootstrap/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -958,6 +1226,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/forms/SignUp.php">
+=======
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/index/index.phtml">
+>>>>>>> c1a597de7ad587d2ba5db758f1b2b13f986da3ad
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -979,6 +1250,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/application/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1033,6 +1305,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+=======
+    <entry file="file://$PROJECT_DIR$/public/bootstrap/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> c1a597de7ad587d2ba5db758f1b2b13f986da3ad
         </state>
       </provider>
     </entry>
@@ -1283,6 +1562,85 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15497553">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/bootstrap/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/index/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/bootstrap/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.416666">
+          <caret line="1747" column="14" selection-start-line="1747" selection-start-column="14" selection-end-line="1747" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/index/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.625">
+          <caret line="155" column="30" selection-start-line="155" selection-start-column="30" selection-end-line="155" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.166666">
+          <caret line="179" column="5" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/configs/application.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Hotel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78417265">
+          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
           <folding />
         </state>
       </provider>
