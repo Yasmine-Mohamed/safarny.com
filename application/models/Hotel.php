@@ -50,6 +50,7 @@ class Application_Model_Hotel extends Zend_Db_Table_Abstract
 					$cityHotel[] = $row->findParentRow('Application_Model_City')->toArray();
         				# code...
         			}
+						
         			return $cityHotel;
 
 

@@ -25,7 +25,7 @@ class UserController extends Zend_Controller_Action
             // and In case the data is valid
 
             $username = $this->_request->getParam('username');
-            $password = $this->_request->getParam('password');
+            $password = md5($this->_request->getParam('password'));
 
             $db = Zend_Db_Table::getDefaultAdapter();
             $authen_adapter = new Zend_Auth_Adapter_DbTable(
@@ -117,6 +117,26 @@ class UserController extends Zend_Controller_Action
         $this->redirect();
     }
 
+    public function signupAction()
+    {
+        // action body
+
+        $signUp_form = new Application_Form_SignUp();
+        $this->view->signUp_form = $signUp_form ;
+
+        $request = $this->getRequest();
+        if($request->isPost())
+        {
+           if($signUp_form->isValid(($request->getPost())))
+           {
+               $user = new Application_Model_User();
+               $user->signUp($_POST);
+               $this->redirect();
+           }
+        }
+
+    }
+
 
 
     
@@ -138,6 +158,7 @@ class UserController extends Zend_Controller_Action
                 $id=$user_data['user_id'];
         $this->view->user_form = $form;
         $request = $this->getRequest ();
+
         if($request-> isPost()){
             if (!empty($_POST['submit'])) {
    //do something here;
@@ -153,18 +174,10 @@ class UserController extends Zend_Controller_Action
             if($form2-> isValid($request-> getPost())){
 
               $user_model-> updateUser ($id, $_POST);
-}
-}}
-
-
-}
+            }
+        }
+        }}
     }
-
-
 }
-
-
-
-
 
 

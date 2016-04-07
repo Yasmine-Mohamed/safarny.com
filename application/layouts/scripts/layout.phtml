@@ -22,6 +22,7 @@ background-color:#fff;
 }
 </style>
 </head><!--/head-->
+<body>
 
 <?php
     $authen = Zend_Auth::getInstance();
@@ -32,6 +33,7 @@ background-color:#fff;
     if(empty($session_read) && empty($facebook_session->name)){?>
   <header id="header">
     <nav class="navbar navbar-inverse" role="banner">
+
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -40,7 +42,7 @@ background-color:#fff;
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SaFaRnY.com</a>
+                <a class="navbar-brand" href="">SaFaRnY.com</a>
             </div>
 
             <div class="collapse navbar-collapse navbar-right">
@@ -62,7 +64,7 @@ background-color:#fff;
                         </ul>
                     </li>
                     <li><a href="/user/login">Login</a></li>
-                    <li><a href="#">SignUp</a></li>
+                    <li><a href="/user/signup">SignUp</a></li>
                 </ul>
             </div>
         </div><!--/.container-->
@@ -111,6 +113,7 @@ background-color:#fff;
         $username = $session_read->user_name;?>
         <header id="header">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="banner">
+
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -150,6 +153,8 @@ background-color:#fff;
 </header><!--/header-->
     <?php }
 
-echo $this->layout()->content; 
-
+echo $this->layout()->content;
+?>
+</body>
+</html>
 
