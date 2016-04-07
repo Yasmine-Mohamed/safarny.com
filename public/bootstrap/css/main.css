@@ -10,6 +10,7 @@ body {
   font-family: '',"Lucida Sans";
   color:white;
   line-height: 22px;
+
 }
 
 h1,
@@ -384,13 +385,13 @@ input.search-form:hover {
 }
 
 #main-slider .carousel h2 {
-  color: #fff;
+  color: #000;
 }
 
 #main-slider .carousel .btn-slide {
   padding: 8px 20px;
   background: #c52d2f;
-  color: #fff;
+  color: black;
   border-radius: 4px;
   margin-top: 25px;
   display: inline-block;
@@ -887,7 +888,7 @@ a.accordion-toggle  i{
 .nav-tabs>li.active>a:hover, 
 .nav-tabs>li.active>a:focus {
   border: 0;
-  color:#fff;
+  color:#000;
   background: #1f1f20;
   position: relative;
 }
@@ -911,6 +912,7 @@ a.accordion-toggle  i{
 
 .tab-content{
   padding: 20px;
+  color:black;
 }
 
 .tab-content h2{
