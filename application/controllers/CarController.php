@@ -8,11 +8,6 @@ class CarController extends Zend_Controller_Action
         /* Initialize action controller here */
     }
 
-    public function indexAction()
-    {
-        // action body
-    }
-
     public function addcarrentalAction()
     {
 
@@ -26,13 +21,11 @@ class CarController extends Zend_Controller_Action
 
 
         $form= new Application_Form_Car();
-
-
-
         $form->setCityid($city_id);
         $form->setLocations();
 
         $request = $this->getRequest();
+
         if($request->isPost()){
             if($form->isValid($request->getPost()))
             {
@@ -44,8 +37,4 @@ class CarController extends Zend_Controller_Action
         $this->view->car_form = $form;
 
     }
-
 }
-
-
-

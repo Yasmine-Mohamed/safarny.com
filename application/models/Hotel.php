@@ -8,8 +8,6 @@ class Application_Model_Hotel extends Zend_Db_Table_Abstract
 
     //list available hotels in city
 
-
-
     //add a hotel reservation in database
     function addNewHotelReservation($hotelData,$user_id)
     {
@@ -27,7 +25,5 @@ class Application_Model_Hotel extends Zend_Db_Table_Abstract
         $row->save();
 
     }
-
-
 }
 

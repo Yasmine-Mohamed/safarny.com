@@ -6,7 +6,6 @@ class Application_Model_HotelName extends Zend_Db_Table_Abstract
     function listHotels($city_id)
 
     {
-
         return $this->fetchAll("city_id=$city_id")->toArray();
     }
 

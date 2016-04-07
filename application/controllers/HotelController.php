@@ -8,12 +8,6 @@ class HotelController extends Zend_Controller_Action
         /* Initialize action controller here */
     }
 
-    public function indexAction()
-    {
-        // action body
-    }
-
-
 
     public function addnewhotelreservationAction()
     {
@@ -52,8 +46,3 @@ class HotelController extends Zend_Controller_Action
 
 
 }
-
-
-
-
-
