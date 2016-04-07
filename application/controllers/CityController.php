@@ -23,6 +23,23 @@ class CityController extends Zend_Controller_Action
         $userExpModel_Obj = new Application_Model_UserExp();
         $userExpObj = $userExpModel_Obj->getExperiences($city_id);
         $this->view->experiences = $userExpObj;
+
+        $userExpForm = new Application_Form_AddUserExp();
+        if($this->_request->isPost() && $userExpForm->isValid($_POST)){
+            // In case of submitting the form using POST
+            // and In case the data is valid
+
+            $authen = Zend_Auth::getInstance();
+            $storage = $authen->getStorage();
+            $session_read = $storage->read();
+            $user_id = $session_read->user_id;
+
+            $userExpModel_Obj->addNewExperience($_POST,$user_id,$city_id);
+            $this->redirect('/city/listcity/cid/'.$city_id);
+        }
+
+        $this->view->UserExp_Form = $userExpForm;
+
     }
 
 

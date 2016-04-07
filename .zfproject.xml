@@ -25,10 +25,15 @@
         <controllerFile controllerName="Userexp">
           <actionMethod actionName="index"/>
           <actionMethod actionName="view"/>
+          <actionMethod actionName="addcomment"/>
+          <actionMethod actionName="removeexp"/>
+          <actionMethod actionName="removecomment"/>
+          <actionMethod actionName="editcomment"/>
         </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Login"/>
+        <formFile formName="AddUserExp"/>
       </formsDirectory>
       <layoutsDirectory>
         <layoutScriptsDirectory>
@@ -39,6 +44,7 @@
         <modelFile modelName="User"/>
         <modelFile modelName="City"/>
         <modelFile modelName="UserExp"/>
+        <modelFile modelName="Comment"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>
@@ -76,6 +82,18 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Userexp">
             <viewScriptFile forActionName="view"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Userexp">
+            <viewScriptFile forActionName="addcomment"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Userexp">
+            <viewScriptFile forActionName="removeexp"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Userexp">
+            <viewScriptFile forActionName="removecomment"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Userexp">
+            <viewScriptFile forActionName="editcomment"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
