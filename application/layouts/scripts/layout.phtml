@@ -14,18 +14,13 @@
     <link href="/bootstrap/css/prettyPhoto.css" rel="stylesheet">
     <link href="/bootstrap/css/main.css" rel="stylesheet">
     <link href="/bootstrap/css/responsive.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script>
-   $(document).ready(function(){
-$("#multiple").on("click", "", function() {
-    $("#strSearch").val($(this).text());
-});
-
-});
-
-
-
-    </script>
+<style>
+body{
+font-family:Helvetica,Arial,sans-serif;
+color:#333;
+background-color:#fff;
+}
+</style>
 </head><!--/head-->
 
 <?php
@@ -50,17 +45,18 @@ $("#multiple").on("click", "", function() {
 
             <div class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="active"><a href="/">Home</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Destinations <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu" id="multiple">
                       <?php
                       $country_model = new Application_Model_Country ();
-        $all_countries=$country_model->find_all_countries() ;
+                    $all_countries=$country_model->find_all_countries() ;
             foreach($all_countries as $key => $value)
- {$i=$value['country_id'];
+ {
+    $i=$value['country_id'];
 
-    echo "<li id=$i><a>".$value['country_name']."</a></li>";
+    echo "<li id=$i><a href=".'"/user-data/show-country/cuid/'.$value['country_id'].'"'.">".$value['country_name']."</a></li>";
 }
 ?>
                         </ul>
@@ -90,20 +86,20 @@ $("#multiple").on("click", "", function() {
 
             <div class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="active"><a href="/">Home</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Destinations <i class="fa fa-angle-down"></i></a>
-                                        <?php
+        <ul class="dropdown-menu">
+                             <?php
                       $country_model = new Application_Model_Country ();
         $all_countries=$country_model->find_all_countries() ;
             foreach($all_countries as $key => $value)
- {$i=$value['country_id'];
-    echo "<li id=$i><a>".$value['country_name']."</a></li>";
+ {
+    echo "<li><a href=".'"/user-data/show-country/cuid/'.$value['country_id'].'"'.">".$value['country_name']."</a></li>";
 }
 ?>
-                    </li>
-                    <li>'."Welcome ".$facebook_session->name.' <a href="/user/fblogout">Logout</a></li>
-                </ul>
+                        </ul>
+                
             </div>
         </div><!--/.container-->
     </nav><!--/nav-->
@@ -129,7 +125,7 @@ $("#multiple").on("click", "", function() {
             <div class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
 
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="active"><a href="/">Home</a></li>
                     <li class="active"><a href="/user-data/show-profile">profile</a></li>
 
                     <li class="dropdown">
@@ -140,7 +136,7 @@ $("#multiple").on("click", "", function() {
         $all_countries=$country_model->find_all_countries() ;
             foreach($all_countries as $key => $value)
  {
-    echo "<li><a href=".'"/user-data/show-city/cuid/'.$value['country_id'].'"'.">".$value['country_name']."</a></li>";
+    echo "<li><a href=".'"/user-data/show-country/cuid/'.$value['country_id'].'"'.">".$value['country_name']."</a></li>";
 }
 ?>
                         </ul>

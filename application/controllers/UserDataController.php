@@ -51,27 +51,22 @@ class UserDataController extends Zend_Controller_Action
 
     }
 
-    public function showCityAction()
+
+    public function showCountryAction()
     {        $country_id = $this->_request->getParam("cuid");        
     
             $country_model = new Application_Model_Country ();
-        $city_model = new Application_Model_City ();
+            $city_model = new Application_Model_City ();
 
-        $country=$country_model->find_country_name($country_id);
-        $cities=$city_model->find_city_country($country_id);
-        $this->view->show_country_name = $country;
-        $this->view->show_city_country = $cities;
+            $country=$country_model->find_country_name($country_id);
+            $all_countries=$country_model->find_all_countries($country_id);
 
+            
 
-
-    }
-
-    public function showCountriesAction()
-    {   
-        $country_model = new Application_Model_Country ();
-        $all_countries=$country_model->find_all_countries() ;
+            $cities=$city_model->find_city_country($country_id);
+            $this->view->show_country_name = $country;
+            $this->view->show_city_country = $cities;
         
-       $this->view->layout()->all_countries=$all_countries;
     }
 
 
