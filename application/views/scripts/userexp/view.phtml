@@ -60,13 +60,18 @@
 			<div id="comments_section" class="container-fluid">
 				<?php
 
+					$user_model_object = new Application_Model_User();
+
 					foreach($this->comments as $comment){
+
+						$user_name = json_decode($user_model_object->getUsername($comment['user_id']),true);
+
 						echo '<div comment_id="'.$comment['comment_id'].'" class="comment media">
 								<a class="pull-left" href="#">
 									<img class="media-object" src="http://placehold.it/64x64" alt="">
 								</a>
 						  		<div class="media-body">
-									<h4 class="media-heading">'.$comment['user_id'].'
+									<h4 class="media-heading">'.$user_name['user_name'].'
 										<small>August 25, 2014 at 9:30 PM</small>
 									</h4><p class="comment_value">'.$comment['comment']
 								.'</p></div>';
