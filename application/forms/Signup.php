@@ -10,7 +10,7 @@ class Application_Form_Signup extends Zend_Form
 
         $id = new Zend_Form_Element_Hidden('id');
         $user_name = new Zend_Form_Element_Text('user_name');
-                $user_name->setLabel('username');
+			$user_name->setLabel('User Name:');
 
         $user_name->setAttribs(Array(
 			'placeholder'=>'Example: ghada',
@@ -81,7 +81,7 @@ class Application_Form_Signup extends Zend_Form
 'class'=>'form-control'
 ));*/
 // submit
-    	$submit = new Zend_Form_Element_Submit('submit');
+    	$submit = new Zend_Form_Element_Submit('Submit');
     	$submit->setAttrib('class', 'btn btn-success');
     	
     	//reset
