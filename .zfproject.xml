@@ -9,14 +9,39 @@
       <controllersDirectory>
         <controllerFile controllerName="Index">
           <actionMethod actionName="index"/>
+          <actionMethod actionName="addNewHotelReservation"/>
         </controllerFile>
         <controllerFile controllerName="Error"/>
+        <controllerFile controllerName="Hotel">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="listHotels"/>
+          <actionMethod actionName="addNewHotelReservation"/>
+        </controllerFile>
+        <controllerFile controllerName="Car">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="addcarrental"/>
+        </controllerFile>
+      </controllersDirectory>
+      <formsDirectory>
+        <formFile formName="Hotel"/>
+        <formFile formName="Car"/>
+      </formsDirectory>
+      <controllersDirectory>
         <controllerFile controllerName="User">
           <actionMethod actionName="index"/>
           <actionMethod actionName="login"/>
           <actionMethod actionName="logout"/>
           <actionMethod actionName="fblogin"/>
           <actionMethod actionName="fblogout"/>
+          <actionMethod actionName="editDetails"/>
+        </controllerFile>
+        <controllerFile controllerName="UserData">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="carRental"/>
+          <actionMethod actionName="reservation"/>
+          <actionMethod actionName="showProfile"/>
+          <actionMethod actionName="showCity"/>
+          <actionMethod actionName="showCountries"/>
         </controllerFile>
         <controllerFile controllerName="City">
           <actionMethod actionName="index"/>
@@ -34,6 +59,8 @@
       <formsDirectory>
         <formFile formName="Login"/>
         <formFile formName="AddUserExp"/>
+        <formFile formName="Signup"/>
+        <formFile formName="Password"/>
       </formsDirectory>
       <layoutsDirectory>
         <layoutScriptsDirectory>
@@ -41,10 +68,22 @@
         </layoutScriptsDirectory>
       </layoutsDirectory>
       <modelsDirectory>
+        <modelFile modelName="Hotel"/>
+        <modelFile modelName="Car"/>
         <modelFile modelName="User"/>
         <modelFile modelName="City"/>
         <modelFile modelName="UserExp"/>
         <modelFile modelName="Comment"/>
+        <modelFile modelName="HotelName"/>
+        <modelFile modelName="City"/>
+        <modelFile modelName="Location"/>
+        <modelFile modelName="Booking"/>
+        <modelFile modelName="Car"/>
+        <modelFile modelName="Hotel"/>
+        <modelFile modelName="Country"/>
+        <modelFile modelName="City"/>
+        <modelFile modelName="CarName"/>
+        <modelFile modelName="HotelName"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>
@@ -56,6 +95,22 @@
           <viewControllerScriptsDirectory forControllerName="Error">
             <viewScriptFile forActionName="error"/>
           </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Hotel">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Hotel">
+            <viewScriptFile forActionName="listHotels"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="addNewHotelReservation"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Hotel">
+            <viewScriptFile forActionName="addNewHotelReservation"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Car">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewScriptFile forActionName="addcarrental"/>
           <viewControllerScriptsDirectory forControllerName="User">
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
@@ -94,6 +149,27 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Userexp">
             <viewScriptFile forActionName="editcomment"/>
+            </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="User">
+            <viewScriptFile forActionName="editDetails"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="UserData">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="UserData">
+            <viewScriptFile forActionName="carRental"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="UserData">
+            <viewScriptFile forActionName="reservation"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="UserData">
+            <viewScriptFile forActionName="showProfile"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="UserData">
+            <viewScriptFile forActionName="showCity"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="UserData">
+            <viewScriptFile forActionName="showCountries"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
