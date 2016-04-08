@@ -41,6 +41,30 @@ class Application_Model_User extends Zend_Db_Table_Abstract
 
     }
 
+	public function getUsername($id){
+		$dbhost = 'localhost';
+		$dbuser = 'root';
+		$dbpass = 'ahh2010';
+		$dbname = 'safarny';
+
+		$con = new mysqli($dbhost,$dbuser,$dbpass,$dbname);
+		$stmt = $con->prepare("select user_name from user where user_id = ?");
+		$stmt->bind_param("i",$id);
+		$stmt->execute();
+		$stmt->bind_result($username);
+		while($stmt->fetch()){
+			$assoc_array = array(
+				'user_name' => $username
+			);
+		}
+
+		$jsonObj = json_encode($assoc_array);
+		$stmt->close();
+
+		return $jsonObj;
+
+	}
+
 
 }
 

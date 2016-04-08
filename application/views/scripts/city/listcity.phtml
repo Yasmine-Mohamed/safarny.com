@@ -14,14 +14,19 @@
 <div class="container">
 	<div class="container">
 		<?php
+
+		$user_model_object = new Application_Model_User();
+
 		$exp_index = 0;
 		for($i=0;$i< ceil(count($this->experiences)/3);$i++){
 			echo '<div class="row stylish-panel">';
-
 			for($exp_index;$exp_index < count($this->experiences);$exp_index++){
+
+				$user_name = json_decode($user_model_object->getUsername($this->experiences[$exp_index]['user_id']),true);
+
 				echo '<div class="col-md-4">
 							<div>
-								<h2>'.$this->experiences[$exp_index]['user_id'].'</h2>
+								<h2>'.$user_name['user_name'].'</h2>
 								<p>'.$this->experiences[$exp_index]['post_title'].'</p>
 								<a href="/userexp/view/eid/'.$this->experiences[$exp_index]['post_id'].'" class="btn btn-default" title="See more">See Experience »</a>
 							</div>

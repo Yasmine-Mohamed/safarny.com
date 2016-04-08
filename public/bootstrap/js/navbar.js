@@ -22,6 +22,6 @@ $(function(){
     console.log(booking.children().eq(2));
     booking.children().eq(2).after(booking_dropdown)
 
-    alert('Done');
+    //alert('Done');
 
 });
