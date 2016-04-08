@@ -1,47 +1,47 @@
 <style>
-.img-holder {position: relative;}
-.img-holder .link {
-    position: absolute;
-    bottom: 25px; /*your button position*/
-    right: 130px; /*your button position*/
-}
+    .img-holder {position: relative;}
+    .img-holder .link {
+        position: absolute;
+        bottom: 35px; /*your button position*/
+        right: 130px; /*your button position*/
+    }
 </style>
-<div id="view-content">
+<body>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron" style="background-color: transparent">
+    <div class="container">
+        <h1 style ="color:black ;font-size:45px;"><?php echo $this->show_country_name[0]['country_name']; ?></h1>
+        <img src=<?php echo $this->show_country_name[0]['image'];?> class="thumbnail img" alt="user picture" width=100% style="text-align=center">
+        </div>
+    </div>
+
+</div>
 <div class="container">
-
-
-  <?php
-  foreach($this->show_country_name as $key => $value)
-  	{?>
-	<div class="page-header" style="margin-top:100px;">
-
-   <h1 style ="color:black ;font-size:45px;"><?php echo $this->show_country_name[0]['country_name']; ?></h1></div>
-   <div>
-   		<img src=<?php echo $this->show_country_name[0]['image'];?> class="thumbnail img-responsive" alt="user picture" width="500" height="800" style="text-align=center">
-   </div>
-   <div class="row">
-   <div class="small-12 medium-7 large-7 columns">
-   <h2>Description</h2>
-   <h3 ><?php echo $this->show_country_name[0]['country_description']; ?></h3>
-   </div><?php } ?>
-   <h2>Cities</h2>
-
-
-
-
-
-
-<div class="row">
-<?php foreach($this->show_city_country as $key => $value)
-{?>
-<div class="col-xs-4">
-    <div class="img-holder">
-   		<img src=<?php echo $value['image'];?> class="img-thumbnail img-circle" alt="user picture" width="800" height="800" style="text-align=center">
-   		 <a class="btn btn-default link" href="<?php echo $this->baseUrl() ?>/user/edit-details"> Read more>></a>
-   </div>
-  
+    <div class="center wow fadeInDown">
+        <h2>Description</h2>
+        <p class="lead"><?php echo $this->show_country_name[0]['country_description']; ?></p>
+    </div>
 </div>
-<?php }?>
+<hr>
+
+<div class="container">
+    <div class="container">
+        <?php
+        echo '<div class="row stylish-panel">';
+
+        foreach($this->show_city_country as $key => $value)
+        {   ?>   <div class="col-lg-4">
+            <div class="img-holder">
+                <img src=<?php echo $value['image'];?> class="img-thumbnail" alt="user picture" width="800" height="800" style="text-align=center">
+            </div>
+            <a class="btn btn-primary link" href="<?php echo $this->baseUrl() ?>/city/listcity/cid/<?php echo $value['city_id'];?> "> Read more>></a>
+
+
+        </div>
+        <?php }?>
+    </div>
 </div>
-</div>
-</div>
+<!-- /container -->
+
+</body>
+

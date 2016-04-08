@@ -2,11 +2,16 @@
 <body>
 <br><br><br><br>
 <!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
+<div class="jumbotron" style="background-image: url('/bootstrap/images/cities/alex.jpg')">
 	<div class="container">
-		<h1><?php echo $this->city['city_name']; ?></h1>
-		<pre><?php echo $this->city['description'] ?></pre>
+		<h1 style ="color:black ;font-size:45px;"><?php echo $this->city['city_name']; ?></h1>
 		<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+	</div>
+</div>
+<div class="container">
+	<div class="center wow fadeInDown">
+		<h2>Description</h2>
+		<p class="lead"><?php echo $this->city['description'] ?></p>
 	</div>
 </div>
 
@@ -19,10 +24,10 @@
 
 			for($exp_index;$exp_index < count($this->experiences);$exp_index++){
 				echo '<div class="col-md-4">
-							<div>
+							<div style="background-color: Background ">
 								<h2>'.$this->experiences[$exp_index]['user_id'].'</h2>
 								<p>'.$this->experiences[$exp_index]['post_title'].'</p>
-								<a href="/userexp/view/eid/'.$this->experiences[$exp_index]['post_id'].'" class="btn btn-default" title="See more">See Experience »</a>
+								<a href="/userexp/view/eid/'.$this->experiences[$exp_index]['post_id'].'" class="btn btn-primary" title="See more">See Experience »</a>
 							</div>
 						</div>';
 			}
