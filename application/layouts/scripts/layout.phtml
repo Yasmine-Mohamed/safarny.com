@@ -26,8 +26,9 @@
     $session_read = $storage->read();
 
     $facebook_session = new Zend_Session_Namespace('facebook');
+    $twitter_session = new Zend_Session_Namespace('twitter');
 
-    if(empty($session_read) && empty($facebook_session->name)){?>
+    if(empty($session_read) && empty($facebook_session->name) && empty($twitter_session->name)){?>
   <header id="header">
     <nav class="navbar navbar-inverse" role="banner">
         <div class="container">
@@ -146,6 +147,45 @@
     </nav><!--/nav-->
 
 </header><!--/header-->
+
+    <?php }elseif(isset($twitter_session->name) && !empty($twitter_session->name)){
+
+        ?><header id="header">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Safarny.com</a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Destinations <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <?php
+                                $country_model = new Application_Model_Country ();
+                                $all_countries=$country_model->find_all_countries() ;
+                                foreach($all_countries as $key => $value){
+                                    echo "<li><a href=".'"/user-data/show-country/cuid/'.$value['country_id'].'"'.">".$value['country_name']."</a></li>";
+                                }
+                                ?>
+                            </ul>
+                        </li>
+                        <li><a><?php echo "Welcome "."$twitter_session->name    "; ?></a></li>
+                        <li><a href="/user/twtlogout"><i class="glyphicon glyphicon-log-out"> </i> Logout</a></li>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+
+        </header><!--/header-->
+
 
     <?php }
 

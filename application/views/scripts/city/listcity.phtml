@@ -1,18 +1,21 @@
 
 <body>
-<br><br><br><br>
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <input id="city_id" type="hidden" value="<?php echo $this->city['city_id']; ?>">
 <div class="jumbotron">
 	<div class="container">
+		<br>
 		<h1><?php echo $this->city['city_name']; ?></h1>
 		<pre><?php echo $this->city['description'] ?></pre>
-		<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
 	</div>
 </div>
 
 <div class="container">
 	<div class="container">
+		<div class="col-xs-12">
+			<h2 align="center" style="font-family: 'Ubuntu Light'"></i>Experiences about this City </h2>
+			<hr>
+		</div>
 		<?php
 
 		$user_model_object = new Application_Model_User();
@@ -41,26 +44,73 @@
 </div>
 <!-- /container -->
 <hr>
-<div class="container">
-	<div class="row">
-		<div class="col-lg-offset-2 col-lg-8 col-lg-offset-2">
-			<form method="post">
-				<?php
-				echo $this->UserExp_Form->getElement('post_title');
-				echo '<br>';
-				echo $this->UserExp_Form->getElement('post_desc');
-				echo '<br>';
-//				echo $this->UserExp_Form->getElement('ShareExperience');
-//				echo '<br>';
-				?>
-				<button class="btn btn-success btn-lg" type="submit">Share Experience !!</button>
-			</form>
+
+<?php
+
+	$authen = Zend_Auth::getInstance();
+	$storage = $authen->getStorage();
+	$session_read = $storage->read();
+	if(!empty($session_read)){
+
+		?>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<h2 align="center" style="font-family: 'Ubuntu Light'"></i> Got an Experience with this City, Share
+						it with us</h2>
+					<hr>
+				</div>
+				<br>
+				<div class="col-lg-offset-2 col-lg-8 col-lg-offset-2">
+					<form method="post">
+						<?php
+						echo $this->UserExp_Form->getElement('post_title');
+						echo '<br>';
+						echo $this->UserExp_Form->getElement('post_desc');
+						echo '<br>';
+						?>
+						<button class="btn btn-success btn-lg" type="submit"><i class="glyphicon glyphicon-send"></i>
+							Share your experience
+						</button>
+					</form>
+				</div>
+			</div>
 		</div>
-</div>
-</div>
-<hr>
+		<hr>
+		<?php
+	}
+		?>
+
+<br>
 
 
+<div class="container" style="border: 1px;">
+	<h2 align="center" style="font-family: 'Ubuntu Light'"><i class="glyphicon glyphicon-map-marker"></i>  Checkout <?php echo $this->city['city_name']; ?> on Google Maps</h2>
+	<hr>
+	<div id="map" class="container" style="width: 1000px;height:400px;background-color: #CCC;">
+	</div>
+</div>
+
+
+
+<script>
+	function initMap() {
+		var mapDiv = document.getElementById('map');
+		var myLatLng = {lat:31.205753, lng: 29.924526};
+		var map = new google.maps.Map(mapDiv, {
+			center: myLatLng,
+			zoom: 8
+		});
+		var marker = new google.maps.Marker({
+			position: myLatLng,
+			map: map,
+			title: 'Alexandria'
+		});
+	}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8qj-3E6nRcvPyJP9DwpAZ3Xr_iSq_ot8&callback=initMap"
+		async defer></script>
 <script src="/bootstrap/js/navbar.js"></script>
 </body>
 

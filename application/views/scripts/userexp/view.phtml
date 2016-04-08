@@ -5,7 +5,9 @@
 	$authen = Zend_Auth::getInstance();
 	$storage = $authen->getStorage();
 	$session_read = $storage->read();
-	$user_id = $session_read->user_id;
+	if(!empty($session_read)){
+		$user_id = $session_read->user_id;
+	}
 
 ?>
 
@@ -22,11 +24,16 @@
 			<!-- Title -->
 			<h1><?php echo $this->experience['post_title'] ?></h1>
 			<input type="hidden" id="post_id" value="<?php echo $this->experience['post_id'] ; ?>">
-			<input type="hidden" id="user_id" value="<?php echo $user_id; ?>">
+			<input type="hidden" id="user_id" value="<?php if (!empty($user_id)){echo $user_id;} ?>">
 
 			<!-- Author -->
 			<p class="lead">
-				by <a><?php echo $this->experience['user_id'] ?></a>
+				by <a><?php //echo $this->experience['user_id']
+						$user_model_object = new Application_Model_User();
+						$user_name = json_decode($user_model_object->getUsername($this->experience['user_id']),true);
+						echo $user_name['user_name'];
+					// ?>
+				   </a>
 			</p>
 
 			<p>
@@ -34,9 +41,11 @@
 			$authen = Zend_Auth::getInstance();
 			$storage = $authen->getStorage();
 			$session_read = $storage->read();
-			$user_id = $session_read->user_id;
-			if($user_id === $this->experience['user_id']){
-				echo '<a class="btn btn-danger" href="/userexp/removeexp/eid/'.$this->experience['post_id'].'" role="button">Delete</a>';
+			if(!empty($session_read)){
+				$user_id = $session_read->user_id;
+				if($user_id === $this->experience['user_id']){
+					echo '<a class="btn btn-danger" href="/userexp/removeexp/eid/'.$this->experience['post_id'].'" role="button">Delete</a>';
+				}
 			}
 			?>
 			</p>
@@ -76,10 +85,13 @@
 									</h4><p class="comment_value">'.$comment['comment']
 								.'</p></div>';
 
-						if($user_id === $comment['user_id']) {
-							echo '<button class="btn btn-danger delete_comment_button btn-xs"><span class="glyphicon glyphicon-remove"></span></button>';
-							echo ' <button class="btn btn-success update_comment_button btn-xs"><span class="glyphicon glyphicon-edit"></span></button>';
+						if(!empty($session_read)){
+							if($user_id === $comment['user_id']) {
+								echo '<button class="btn btn-danger delete_comment_button btn-xs"><span class="glyphicon glyphicon-remove"></span></button>';
+								echo ' <button class="btn btn-success update_comment_button btn-xs"><span class="glyphicon glyphicon-edit"></span></button>';
 							}
+
+						}
 							echo '</div>';
 				}
 			?>
@@ -87,16 +99,28 @@
 			<hr>
 			<br>
 			<!-- Comments Form -->
-			<div class="well">
-				<h4>Leave a Comment:</h4>
-				<div role="form">
-					<div class="form-group">
-						<textarea id="commentText" class="form-control" rows="3"></textarea>
+			<?php
+
+			$authen = Zend_Auth::getInstance();
+			$storage = $authen->getStorage();
+			$session_read = $storage->read();
+			if(!empty($session_read)) {
+
+				?>
+
+				<div class="well">
+					<h4>Leave a Comment:</h4>
+					<div role="form">
+						<div class="form-group">
+							<textarea id="commentText" class="form-control" rows="3"></textarea>
+						</div>
+						<button id="addComment_button" class="btn btn-primary">Submit</button>
 					</div>
-					<button id="addComment_button" class="btn btn-primary">Submit</button>
 				</div>
-			</div>
-			<hr>
+				<hr>
+				<?php
+			}
+			?>
 
 		</div>
 		<script src="/bootstrap/js/addComment.js"></script>
