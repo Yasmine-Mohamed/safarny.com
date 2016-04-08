@@ -81,6 +81,19 @@ class UserexpController extends Zend_Controller_Action
 
     }
 
+    public function editexpAction(){
+
+        $this->_helper->layout()->disableLayout();
+        $this->_helper->viewRenderer->setNoRender(true);
+        $request = $this->getRequest();
+
+        if($request->isPost()){
+            $user_exp_model = new Application_Model_UserExp();
+            $user_exp_model->updateExp($request->getParams());
+        }
+
+    }
+
 
 }
 
