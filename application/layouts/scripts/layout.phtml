@@ -14,145 +14,136 @@
     <link href="/bootstrap/css/prettyPhoto.css" rel="stylesheet">
     <link href="/bootstrap/css/main.css" rel="stylesheet">
     <link href="/bootstrap/css/responsive.css" rel="stylesheet">
-<style>
-body{
-font-family:Helvetica,Arial,sans-serif;
-color:#333;
-background-color:#fff;
-}
-</style>
 </head><!--/head-->
 <body>
 
 <?php
-    $authen = Zend_Auth::getInstance();
-    $storage = $authen->getStorage();
-    $session_read = $storage->read();
-    $facebook_session = new Zend_Session_Namespace('facebook');
+$authen = Zend_Auth::getInstance();
+$storage = $authen->getStorage();
+$session_read = $storage->read();
+$facebook_session = new Zend_Session_Namespace('facebook');
 
-    if(empty($session_read) && empty($facebook_session->name)){?>
-  <header id="header">
-    <nav class="navbar navbar-inverse" role="banner">
+if(empty($session_read) && empty($facebook_session->name)){?>
+    <header id="header">
+        <nav class="navbar navbar-inverse" role="banner">
 
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="">SaFaRnY.com</a>
-            </div>
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">SaFaRnY.com</a>
+                </div>
 
-            <div class="collapse navbar-collapse navbar-right">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Destinations <i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu" id="multiple">
-                      <?php
-                      $country_model = new Application_Model_Country ();
-                    $all_countries=$country_model->find_all_countries() ;
-            foreach($all_countries as $key => $value)
- {
-    $i=$value['country_id'];
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Destinations <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" id="multiple">
+                                <?php
+                                $country_model = new Application_Model_Country ();
+                                $all_countries=$country_model->find_all_countries() ;
+                                foreach($all_countries as $key => $value)
+                                {
+                                    $i=$value['country_id'];
+                                    echo "<li id=$i><a href=".'"/user-data/show-country/cuid/'.$value['country_id'].'"'.">".$value['country_name']."</a></li>";
+                                }?>
+                            </ul>
+                        </li>
+                        <li><a href="/user/login"> Login</a></li>
+                        <li><a href="/user/signup"> SignUp</a></li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
 
-    echo "<li id=$i><a href=".'"/user-data/show-country/cuid/'.$value['country_id'].'"'.">".$value['country_name']."</a></li>";
-}
-?>
-                        </ul>
-                    </li>
-                    <li><a href="/user/login">Login</a></li>
-                    <li><a href="/user/signup">SignUp</a></li>
-                </ul>
-            </div>
-        </div><!--/.container-->
-    </nav><!--/nav-->
+    </header><!--/header-->
+    <?php
+}elseif(isset($facebook_session->name) && !empty($facebook_session->name)){
 
-</header><!--/header-->
- <?php }elseif(isset($facebook_session->name) && !empty($facebook_session->name)){
+    ?>
+    <header id="header">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">SaFaRnY.com</a>
+                </div>
 
-        ?><header id="header">
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="banner">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">SaFaRnY.com</a>
-            </div>
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Destinations <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <?php
+                                $country_model = new Application_Model_Country ();
+                                $all_countries=$country_model->find_all_countries() ;
+                                foreach($all_countries as $key => $value)
+                                {
+                                    echo "<li><a href=".'"/user-data/show-country/cuid/'.$value['country_id'].'"'.">".$value['country_name'].
+                                        "</a></li>";
+                                }?>
+                            </ul>
+                        </li>
+                        <li><?php echo "Welcome "."$facebook_session->name  "?><a href="/user/fblogout">Logout</a></li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
 
-            <div class="collapse navbar-collapse navbar-right">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Destinations <i class="fa fa-angle-down"></i></a>
-        <ul class="dropdown-menu">
-                             <?php
-                      $country_model = new Application_Model_Country ();
-        $all_countries=$country_model->find_all_countries() ;
-            foreach($all_countries as $key => $value)
- {
-    echo "<li><a href=".'"/user-data/show-country/cuid/'.$value['country_id'].'"'.">".$value['country_name']."</a></li>";
-}
-?>
-                        </ul>
-                
-            </div>
-        </div><!--/.container-->
-    </nav><!--/nav-->
+    <?php
+}elseif(isset($session_read) && !empty($session_read)){
 
-</header><!--/header-->
+    $username = $session_read->user_name;?>
 
-    <?php }elseif(isset($session_read) && !empty($session_read)){
+    <header id="header">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">SaFaRnY.com</a>
+                </div>
 
-        $username = $session_read->user_name;?>
-        <header id="header">
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="banner">
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">Home</a></li>
+                        <li class="active"><a href="/user-data/show-profile">Profile</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Destinations <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <?php
+                                $country_model = new Application_Model_Country ();
+                                $all_countries=$country_model->find_all_countries() ;
+                                foreach($all_countries as $key => $value)
+                                {
+                                    echo "<li><a href=".'"/user-data/show-country/cuid/'.$value['country_id'].'"'.">".$value['country_name']."</a></li>";
+                                }?>
+                            </ul>
+                        </li>
+                        <li> <?php echo "Welcome "." $username  "?><a href="/user/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
 
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">SaFaRnY.com</a>
-            </div>
-
-            <div class="collapse navbar-collapse navbar-right">
-                <ul class="nav navbar-nav">
-
-                    <li class="active"><a href="/">Home</a></li>
-                    <li class="active"><a href="/user-data/show-profile">profile</a></li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Destinations <i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                             <?php
-                      $country_model = new Application_Model_Country ();
-        $all_countries=$country_model->find_all_countries() ;
-            foreach($all_countries as $key => $value)
- {
-    echo "<li><a href=".'"/user-data/show-country/cuid/'.$value['country_id'].'"'.">".$value['country_name']."</a></li>";
-}
-?>
-                        </ul>
-                    </li>
-                    <li> <?php echo "Welcome .$username "?><a href="/user/logout">Logout</a></li>
-                </ul>
-            </div>
-        </div><!--/.container-->
-    </nav><!--/nav-->
-
-</header><!--/header-->
-    <?php }
-
+<?php }
 echo $this->layout()->content;
 ?>
 </body>

@@ -4,8 +4,9 @@
 	<table class="table">
 		<?php
 		echo "<tr>".
-		"<th>Country Name</th>".
-		"<th>Rate</th>".
+		    "<th>Country Name</th>".
+			"<th>Description</th>".
+		    "<th>Rate</th>".
 			"<th>Action</th>".
 			"<th></th>".
 		"</tr>";
@@ -14,6 +15,7 @@
 			echo
 				"<tr>".
 				"<td>" . $value['country_name'] . "</td>" .
+				"<td>" . $value['country_description'] . "</td>" .
 				"<td>" . $value['rate'] . "</td>" .
 				"<td> <a class='btn btn-danger' href='delete/cid/".$value['country_id']."'> Delete </a> </td>".
 				"<td> <a class='btn btn-warning' href='edit/cid/".$value['country_id']."'> Edit </a> </td>"

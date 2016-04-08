@@ -17,6 +17,12 @@ class Application_Form_AddCountry extends Zend_Form
             'class' => 'form-control'
         ));
 
+        $country_description = new Zend_Form_Element_Text('country_description');
+        $country_description->setAttribs(array(
+            'placeholder' => 'Country Description',
+            'class' => 'form-control'
+        ));
+
         $rate = new Zend_Form_Element_Text('rate');
         $rate->setAttribs(array(
             'placeholder' => 'Rate',
@@ -30,6 +36,7 @@ class Application_Form_AddCountry extends Zend_Form
         $this->addElements(array(
             $id,
             $country,
+            $country_description,
             $rate,
             $add
         ));

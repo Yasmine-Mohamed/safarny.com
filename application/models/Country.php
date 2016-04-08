@@ -19,6 +19,7 @@ class Application_Model_Country extends Zend_Db_Table_Abstract
         $row = $this->createRow();
         $row->country_name = $country_data['country_name'];
         $row->rate = $country_data['rate'];
+        $row->country_description = $country_data['country_description'];
         $row->save();
     }
 

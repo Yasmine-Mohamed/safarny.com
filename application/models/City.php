@@ -20,7 +20,10 @@ class Application_Model_City extends Zend_Db_Table_Abstract
         $row->city_name = $city_data['city_name'];
         $row->rate = $city_data['rate'];
         $row->description = $city_data['description'];
+        $row->country_id = $city_data['country_id'];
+        $row->image = $city_data['image'];
         $row->save();
+
     }
 
     function editCity($city_data)

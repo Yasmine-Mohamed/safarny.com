@@ -156,8 +156,8 @@ class UserController extends Zend_Controller_Action
                 $user_data = json_decode(json_encode($sessionRead), true);
                 $form->populate($user_data);
                 $id=$user_data['user_id'];
-        $this->view->user_form = $form;
-        $request = $this->getRequest ();
+                $this->view->user_form = $form;
+                $request = $this->getRequest ();
 
         if($request-> isPost()){
             if (!empty($_POST['submit'])) {
