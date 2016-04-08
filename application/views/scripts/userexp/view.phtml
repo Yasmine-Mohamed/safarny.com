@@ -1,0 +1,97 @@
+<!-- Page Content -->
+
+<?php
+
+	$authen = Zend_Auth::getInstance();
+	$storage = $authen->getStorage();
+	$session_read = $storage->read();
+	$user_id = $session_read->user_id;
+
+?>
+
+<br><br><br><br><br>
+<div class="container">
+
+	<div class="row">
+
+		<!-- Blog Post Content Column -->
+		<div class="panel panel-danger col-lg-offset-2 col-lg-8 col-lg-offset-2">
+
+			<!-- Blog Post -->
+
+			<!-- Title -->
+			<h1><?php echo $this->experience['post_title'] ?></h1>
+			<input type="hidden" id="post_id" value="<?php echo $this->experience['post_id'] ; ?>">
+			<input type="hidden" id="user_id" value="<?php echo $user_id; ?>">
+
+			<!-- Author -->
+			<p class="lead">
+				by <a><?php echo $this->experience['user_id'] ?></a>
+			</p>
+
+			<p>
+			<?php
+			$authen = Zend_Auth::getInstance();
+			$storage = $authen->getStorage();
+			$session_read = $storage->read();
+			$user_id = $session_read->user_id;
+			if($user_id === $this->experience['user_id']){
+				echo '<a class="btn btn-danger" href="/userexp/removeexp/eid/'.$this->experience['post_id'].'" role="button">Delete</a>';
+			}
+			?>
+			</p>
+
+
+			<!-- Preview Image -->
+			<img class="img-responsive" src="" alt="">
+
+			<hr>
+
+			<!-- Post Content -->
+			<pre class="lead"><?php echo $this->experience['post']; ?></pre>
+
+			<hr>
+
+			<!-- Blog Comments -->
+
+			<!-- Posted Comments -->
+			<!-- Comment -->
+			<h3>Comments: </h3>
+			<div id="comments_section" class="container-fluid">
+				<?php
+
+					foreach($this->comments as $comment){
+						echo '<div comment_id="'.$comment['comment_id'].'" class="comment media">
+								<a class="pull-left" href="#">
+									<img class="media-object" src="http://placehold.it/64x64" alt="">
+								</a>
+						  		<div class="media-body">
+									<h4 class="media-heading">'.$comment['user_id'].'
+										<small>August 25, 2014 at 9:30 PM</small>
+									</h4><p class="comment_value">'.$comment['comment']
+								.'</p></div>';
+
+						if($user_id === $comment['user_id']) {
+							echo '<button class="btn btn-danger delete_comment_button btn-xs"><span class="glyphicon glyphicon-remove"></span></button>';
+							echo ' <button class="btn btn-success update_comment_button btn-xs"><span class="glyphicon glyphicon-edit"></span></button>';
+							}
+							echo '</div>';
+				}
+			?>
+			</div>
+			<hr>
+			<br>
+			<!-- Comments Form -->
+			<div class="well">
+				<h4>Leave a Comment:</h4>
+				<div role="form">
+					<div class="form-group">
+						<textarea id="commentText" class="form-control" rows="3"></textarea>
+					</div>
+					<button id="addComment_button" class="btn btn-primary">Submit</button>
+				</div>
+			</div>
+			<hr>
+
+		</div>
+		<script src="/bootstrap/js/addComment.js"></script>

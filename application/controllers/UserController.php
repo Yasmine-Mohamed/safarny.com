@@ -10,11 +10,6 @@ class UserController extends Zend_Controller_Action
         $facebook_session = new Zend_Session_Namespace('facebook');
     }
 
-    public function indexAction()
-    {
-        // action body
-    }
-
     public function loginAction()
     {
         // action body
@@ -137,47 +132,45 @@ class UserController extends Zend_Controller_Action
 
     }
 
-
-
-    
     public function editDetailsAction()
-    {       
-            $form = new Application_Form_Signup ();
-            $form2=new Application_Form_Password();
-            $user_model = new Application_Model_User ();
-            $form->removeElement('pswd');
-            $form->removeElement('email');
-            $form->removeElement('reset');
-            $authen_instance = Zend_Auth::getInstance();
-            $storage = $authen_instance->getStorage();
-            $sessionRead = $storage->read();
-            
-            if (!empty($sessionRead)) {
-                $user_data = json_decode(json_encode($sessionRead), true);
-                $form->populate($user_data);
-                $id=$user_data['user_id'];
-                $this->view->user_form = $form;
-                $request = $this->getRequest ();
+    {
+        $form = new Application_Form_Signup ();
+        $form2=new Application_Form_Password();
+        $user_model = new Application_Model_User ();
+        $form->removeElement('pswd');
+        $form->removeElement('email');
+        $form->removeElement('reset');
+        $authen_instance = Zend_Auth::getInstance();
+        $storage = $authen_instance->getStorage();
+        $sessionRead = $storage->read();
 
-        if($request-> isPost()){
-            if (!empty($_POST['submit'])) {
-   //do something here;
-            if($form-> isValid($request-> getPost())){
-              $user_model-> updateUser ($id, $_POST);
+        if (!empty($sessionRead)) {
+            $user_data = json_decode(json_encode($sessionRead), true);
+            $form->populate($user_data);
+            $id=$user_data['user_id'];
+            $this->view->user_form = $form;
+            $request = $this->getRequest ();
 
-}}}
-        $this->view->password_form = $form2;
-        if($request-> isPost()){
-        if (!empty($_POST['password_submit'])) {
-   //do something here;
+            if($request-> isPost()){
+                if (!empty($_POST['submit'])) {
+                    //do something here;
+                    if($form-> isValid($request-> getPost())){
+                        $user_model-> updateUser ($id, $_POST);
 
-            if($form2-> isValid($request-> getPost())){
+                    }
+                }
+            }
 
-              $user_model-> updateUser ($id, $_POST);
+            $this->view->password_form = $form2;
+            if($request-> isPost()){
+                if (!empty($_POST['password_submit'])) {
+                    //do something here;
+                    if($form2-> isValid($request-> getPost())){
+                        $user_model-> updateUser ($id, $_POST);
+                    }
+                }
             }
         }
-        }}
     }
+
 }
-
-

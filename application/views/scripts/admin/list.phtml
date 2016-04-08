@@ -1,15 +1,16 @@
 <br /><br />
-<body style="background-image: url('/bootstrap/images/paris.jpg')"
+<body style="background-image: url('/bootstrap/images/slider/spain.jpg')"
 <div class="container">
 	<table class="table">
 		<?php
 		echo "<tr>".
-		    "<th>Country Name</th>".
+			"<th>Country Name</th>".
 			"<th>Description</th>".
-		    "<th>Rate</th>".
+			"<th>Rate</th>".
+			"<th>Image</th>".
 			"<th>Action</th>".
 			"<th></th>".
-		"</tr>";
+			"</tr>";
 		foreach($this->countries as $key => $value)
 		{
 			echo
@@ -17,6 +18,7 @@
 				"<td>" . $value['country_name'] . "</td>" .
 				"<td>" . $value['country_description'] . "</td>" .
 				"<td>" . $value['rate'] . "</td>" .
+				"<td><img src='" . $value['image'] . "' height='100' width='150'></td>" .
 				"<td> <a class='btn btn-danger' href='delete/cid/".$value['country_id']."'> Delete </a> </td>".
 				"<td> <a class='btn btn-warning' href='edit/cid/".$value['country_id']."'> Edit </a> </td>"
 				."</tr>";
@@ -28,4 +30,3 @@
 echo $this->add_country;
 
 ?>
-

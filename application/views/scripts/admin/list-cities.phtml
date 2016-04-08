@@ -1,0 +1,34 @@
+<br /><br />
+<body style="background-image: url('/bootstrap/images/slider/spain.jpg')"
+<div class="container">
+	<table class="table">
+		<?php
+		echo "<tr>".
+			"<th>City Name</th>".
+			"<th>Rate</th>".
+			"<th>Description</th>".
+			"<th>Country ID</th>".
+			"<th>Image</th>".
+			"<th>Action</th>".
+			"<th></th>".
+			"</tr>";
+		foreach($this->cities as $key => $value)
+		{
+			echo
+				"<tr>".
+				"<td>" . $value['city_name'] . "</td>" .
+				"<td>" . $value['rate'] . "</td>" .
+				"<td>" . $value['description'] . "</td>" .
+				"<td>" . $value['country_id'] . "</td>" .
+				"<td><img src='" . $value['image'] . "' height='100' width='150'></td>" .
+				"<td> <a class='btn btn-danger' href='delete-City/cid/".$value['city_id']."'> Delete </a> </td>".
+				"<td> <a class='btn btn-warning' href='edit-City/cid/".$value['city_id']."'> Edit </a> </td>"
+				."</tr>";
+		}
+		?>
+	</table>
+</div>
+<?php
+echo $this->add_city;
+
+?>

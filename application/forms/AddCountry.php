@@ -29,6 +29,12 @@ class Application_Form_AddCountry extends Zend_Form
             'class' => 'form-control'
         ));
 
+        $image = new Zend_Form_Element_File('image');
+        $image->addValidator('Count',false ,1);
+        $image->addValidator('Extension',false,'jpg,jpeg,png,gif');
+
+
+
         $add = new Zend_Form_Element_Submit('Add');
         $add->setValue('Add');
         $add->setAttrib('class','btn btn-primary btn-lg');
@@ -38,11 +44,10 @@ class Application_Form_AddCountry extends Zend_Form
             $country,
             $country_description,
             $rate,
+            $image,
             $add
         ));
-
     }
-
 
 
 }

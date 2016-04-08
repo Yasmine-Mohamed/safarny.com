@@ -8,17 +8,18 @@
         echo '</div>';
     }
     ?>
-<body style="background-image: url('/bootstrap/images/new1.jpg')"
-<br><br><br><br><br><br>
 
+<body style="background-image: url('/bootstrap/images/new1.jpg')">
+<br><br><br><br><br><br>
 <div class="container">
     <div class="omb_login">
         <div class="row omb_row-sm-offset-3 omb_socialButtons">
             <div class="col-xs-4 col-sm-2">
-                <?php echo '<a href="'.htmlspecialchars($this->facebook_url).'" class="btn btn-lg btn-block omb_btn-facebook">';?>
-                    <i class="fa fa-facebook visible-xs"></i>
+                <?php echo '
+                <a href="'.htmlspecialchars($this->facebook_url).'" class="btn btn-lg btn-block omb_btn-facebook"><i class="fa fa-facebook visible-xs"></i>
                     <span class="hidden-xs">Facebook</span>
-                </a>
+                </a>';
+                ?>
             </div>
             <div class="col-xs-4 col-sm-2">
                 <a href="#" class="btn btn-lg btn-block omb_btn-twitter">
@@ -43,24 +44,24 @@
         <div class="row">
             <div class="col-xs-12">
                 <form class="omb_loginForm" action="" method="POST">
-                    <div class="input-group col-lg-6 col-sm-offset-3">
+                    <div class="input-group col-sm-12 col-sm-offset-0  col-lg-6 col-lg-offset-3">
                         <?php
                         echo $this->login_form->getElement('username');
                         ?>
                     </div>
-                    <div class="input-group col-lg-6 col-sm-offset-3">
+                    <div class="input-group col-sm-12 col-sm-offset-0 col-lg-6 col-lg-offset-3">
                         <?php
                         echo $this->login_form->getElement('password');
                         ?>
                     </div>
-                    <div class="input-group col-lg-6 col-sm-offset-3">
+                    <div class="input-group col-sm-12 col-sm-offset-0 col-lg-6 col-lg-offset-3">
                     <?php
                     echo $this->login_form->getElement('Login');
                     ?>
                     </div>
                 </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
+</body>
