@@ -120,6 +120,8 @@ class UserController extends Zend_Controller_Action
         $this->view->signUp_form = $signUp_form ;
 
         $request = $this->getRequest();
+
+
         if($request->isPost())
         {
            if($signUp_form->isValid(($request->getPost())))

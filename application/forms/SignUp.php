@@ -10,6 +10,16 @@ class Application_Form_SignUp extends Zend_Form
         $this->setMethod('POST');
         $this->setAttrib('class','form-horizontal');
 
+        //Setting Unique Validator for Username
+        $validator = new Zend_Validate_Db_NoRecordExists(
+            array(
+                'table' => 'user',
+                'field' => 'user_name'
+            )
+        );
+
+        $validator->setMessage('This Username is already taken');
+
         //Username
         $username = new Zend_Form_Element_Text('username');
         $username->setAttribs(array(
@@ -18,6 +28,16 @@ class Application_Form_SignUp extends Zend_Form
         ));
         $username->setRequired();
         $username->addFilter('StringTrim');
+        $username->addValidator($validator);
+
+        //Setting Unique Validator for Email
+        $email_validator = new Zend_Validate_Db_NoRecordExists(
+            array(
+                'table' => 'user',
+                'field' => 'email'
+            )
+        );
+        $email_validator->setMessage('This Email is already taken');
 
         //Email
         $email = new Zend_Form_Element_Text('email');
@@ -26,6 +46,8 @@ class Application_Form_SignUp extends Zend_Form
             'placeholder' => 'Email Address'
         ));
         $email->setRequired();
+        $email->addValidator('EmailAddress');
+        $email->addValidator($email_validator);
 
         //Password
         $password = new Zend_Form_Element_Password('password');
@@ -42,6 +64,9 @@ class Application_Form_SignUp extends Zend_Form
             'placeholder' => 'Password Again'
         ));
         $c_password->setRequired();
+        $c_password->addValidator('identical',false,array(
+            'token' => 'password'
+        ));
 
         //Submit Button
         $submit = new Zend_Form_Element_Submit('SignUp');

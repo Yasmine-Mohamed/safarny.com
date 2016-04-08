@@ -372,8 +372,8 @@ input.search-form:hover {
 }
 
 .no-margin {
-  margin: 20;
-  padding: 20;
+  margin: 0px;
+  padding: 0px;
 }
 
 #main-slider .carousel .carousel-content {
