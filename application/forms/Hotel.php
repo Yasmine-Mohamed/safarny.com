@@ -47,7 +47,7 @@ class Application_Form_Hotel extends Zend_Form
         //to be able to submit form
         $submit=new Zend_Form_Element_Submit('ReserveHotels');
         $submit->setAttribs(Array(
-            'class'=>'btn btn-block btn-lg btn-success'
+            'class'=>'btn btn-block btn-lg btn-primary'
         ));
 
 

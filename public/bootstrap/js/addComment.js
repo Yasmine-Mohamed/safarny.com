@@ -79,6 +79,7 @@ $(function(){
 
         var comment = $('#commentText').val().trim();
         var user_id = $('#user_id').val();
+        var user_name = $('#user_name').val();
         console.log(user_id);
         var post_id = $('#post_id').val();
         var comment_section = $('#comments_section');
@@ -98,7 +99,7 @@ $(function(){
 
                 var comment_id = JSON.parse(data);
 
-                var new_comment = '<div comment_id ="'+comment_id['comment_id']+'" class="comment media"><a class="pull-left" href="#"><img class="media-object" src="http://placehold.it/64x64" alt=""></a><div class="media-body"><h4 class="media-heading">'+ user_id +' <small>August 25, 2014 at 9:30 PM</small> </h4><p class="comment_value">'+ comment +'</p></div> </div>';
+                var new_comment = '<div comment_id ="'+comment_id['comment_id']+'" class="comment media"><a class="pull-left" href="#"><img class="media-object" src="http://placehold.it/64x64" alt=""></a><div class="media-body"><h4 class="media-heading">'+ user_name +' <small>August 25, 2014 at 9:30 PM</small> </h4><p class="comment_value">'+ comment +'</p></div> </div>';
                 var delete_button = '<button class="btn btn-danger delete_comment_button btn-xs"><span class="glyphicon glyphicon-remove"></span></button>';
                 var update_button = ' <button class="btn btn-success update_comment_button btn-xs"><span class="glyphicon glyphicon-edit"></span></button>'
                 comment_section.append(new_comment);

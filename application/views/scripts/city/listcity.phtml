@@ -2,14 +2,20 @@
 <body>
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <input id="city_id" type="hidden" value="<?php echo $this->city['city_id']; ?>">
-<div class="jumbotron">
+<div class="jumbotron" style="background-image: url('/bootstrap/images/cities/alex.jpg')">
 	<div class="container">
 		<br>
 		<h1><?php echo $this->city['city_name']; ?></h1>
-		<pre><?php echo $this->city['description'] ?></pre>
+		<div class="container-fluid">
+			<p><?php echo $this->city['description'] ?></p>
+		</div>
 	</div>
 </div>
 
+<?php
+	if(!empty($this->experiences)){
+
+?>
 <div class="container">
 	<div class="container">
 		<div class="col-xs-12">
@@ -31,7 +37,7 @@
 							<div>
 								<h2>'.$user_name['user_name'].'</h2>
 								<p>'.$this->experiences[$exp_index]['post_title'].'</p>
-								<a href="/userexp/view/eid/'.$this->experiences[$exp_index]['post_id'].'" class="btn btn-default" title="See more">See Experience »</a>
+								<a href="/userexp/view/eid/'.$this->experiences[$exp_index]['post_id'].'" class="btn btn-primary" title="See more">See Experience »</a>
 							</div>
 						</div>';
 			}
@@ -44,6 +50,9 @@
 </div>
 <!-- /container -->
 <hr>
+<?php
+	}
+?>
 
 <?php
 
@@ -88,7 +97,7 @@
 <div class="container" style="border: 1px;">
 	<h2 align="center" style="font-family: 'Ubuntu Light'"><i class="glyphicon glyphicon-map-marker"></i>  Checkout <?php echo $this->city['city_name']; ?> on Google Maps</h2>
 	<hr>
-	<div id="map" class="container" style="width: 1000px;height:400px;background-color: #CCC;">
+	<div id="map" class="container" style="width: 800px;height:400px;background-color: #CCC;">
 	</div>
 </div>
 
@@ -97,7 +106,7 @@
 <script>
 	function initMap() {
 		var mapDiv = document.getElementById('map');
-		var myLatLng = {lat:31.205753, lng: 29.924526};
+		var myLatLng = {lat:<?php echo $this->city['lat']; ?>, lng: <?php echo $this->city['long']; ?>};
 		var map = new google.maps.Map(mapDiv, {
 			center: myLatLng,
 			zoom: 8
@@ -105,7 +114,7 @@
 		var marker = new google.maps.Marker({
 			position: myLatLng,
 			map: map,
-			title: 'Alexandria'
+			title: '<?php echo $this->city['city_name']; ?>'
 		});
 	}
 </script>

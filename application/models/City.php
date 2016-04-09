@@ -12,6 +12,8 @@ class Application_Model_City extends Zend_Db_Table_Abstract
 
     ));
 
+    //get city by id
+
     public function listOneCity($city_id){
         return $this->find($city_id)->toArray();
     }
@@ -19,5 +21,44 @@ class Application_Model_City extends Zend_Db_Table_Abstract
     public function find_city_country($country_id){
         return $this->fetchAll("country_id=$country_id")->toArray();
     }
+
+    function listCities()
+    {
+        return $this->fetchAll()->toArray();
+    }
+
+    function addCity($city_data)
+    {
+        $row = $this->createRow();
+        $row->city_name = $city_data['city_name'];
+        $row->rate = $city_data['rate'];
+        $row->description = $city_data['description'];
+        $row->country_id = $city_data['country_id'];
+        $row->image = $city_data['image'];
+        $row->save();
+
+    }
+
+    function editCity($city_data)
+    {
+        $city['city_name'] = $city_data['city_name'];
+        $city['rate'] = $city_data['rate'];
+        $city['description'] = $city_data['description'];
+        $city['country_id'] = $city_data['country_id'];
+        if($city_data['image'] = !"")
+        {
+            $city['image'] = $city_data['image'];
+        }
+        $id = $city_data['city_id'];
+        $this->update($city,"city_id=$id");
+    }
+
+    function deleteCity($id)
+    {
+        $this->delete("city_id=$id");
+    }
+
+
+
 }
 

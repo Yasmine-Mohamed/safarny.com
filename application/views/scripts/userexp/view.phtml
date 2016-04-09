@@ -1,5 +1,11 @@
 <!-- Page Content -->
-
+<style>
+	body{
+		background-image: url('/bootstrap/images/admin/sea.jpg');
+		background-size: cover;
+	}
+</style>
+<body class="body">
 <?php
 
 	$authen = Zend_Auth::getInstance();
@@ -7,17 +13,18 @@
 	$session_read = $storage->read();
 	if(!empty($session_read)){
 		$user_id = $session_read->user_id;
+		$user_name = $session_read->user_name;
 	}
 
 ?>
 
-<br><br><br><br><br>
+<input id="user_name" type="hidden" value="<?php if (!empty($session_read)){echo $user_name;} ?>">
 <div class="container">
 
 	<div class="row">
 
 		<!-- Blog Post Content Column -->
-		<div class="panel panel-danger col-lg-offset-2 col-lg-8 col-lg-offset-2">
+		<div class="post col-lg-offset-2 col-lg-8 col-lg-offset-2">
 
 			<!-- Blog Post -->
 
@@ -43,9 +50,6 @@
 
 			<p>
 			<?php
-			$authen = Zend_Auth::getInstance();
-			$storage = $authen->getStorage();
-			$session_read = $storage->read();
 			if(!empty($session_read)){
 				$user_id = $session_read->user_id;
 				if($user_id === $this->experience['user_id']){
@@ -109,10 +113,6 @@
 			<br>
 			<!-- Comments Form -->
 			<?php
-
-			$authen = Zend_Auth::getInstance();
-			$storage = $authen->getStorage();
-			$session_read = $storage->read();
 			if(!empty($session_read)) {
 
 				?>
@@ -134,3 +134,5 @@
 		</div>
 		<script src="/bootstrap/js/addComment.js"></script>
 		<script src="/bootstrap/js/edit_userexp.js"></script>
+
+</body>

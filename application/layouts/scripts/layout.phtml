@@ -97,6 +97,7 @@
                     </li>
                     <li><a><?php echo "Welcome "."$facebook_session->name    "; ?></a></li>
                     <li><a href="/user/fblogout"><i class="glyphicon glyphicon-log-out"> </i> Logout</a></li>
+                </ul>
             </div>
         </div><!--/.container-->
     </nav><!--/nav-->
@@ -132,7 +133,7 @@
                              <?php
                                 $country_model = new Application_Model_Country ();
                                 $all_countries=$country_model->find_all_countries() ;
-                             foreach($all_countries as $key => $value){
+                                foreach($all_countries as $key => $value){
                                 echo "<li><a href=".'"/user-data/show-country/cuid/'.$value['country_id'].'"'.">".$value['country_name'].
                                     "</a></li>";
                              }

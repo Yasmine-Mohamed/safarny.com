@@ -4,19 +4,23 @@
         position: absolute;
         bottom: 35px; /*your button position*/
         right: 130px; /*your button position*/
-    }</style>
+
+    }
+</style>
 <body>
-<br><br><br><br>
 <!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
+<div class="jumbotron" style="background-color: transparent">
     <div class="container">
         <h1 style ="color:black ;font-size:45px;"><?php echo $this->show_country_name[0]['country_name']; ?></h1>
-        <div>
-            <img src=<?php echo $this->show_country_name[0]['image'];?> class="thumbnail img-responsive" alt="user picture" width="500" height="800" style="text-align=center">
+        <img src=<?php echo $this->show_country_name[0]['image'];?> class="thumbnail img" alt="user picture" width=100% style="text-align=center">
         </div>
-        <h3>Description</h3>
-        <pre><?php echo $this->show_country_name[0]['country_description']; ?></pre>
+    </div>
 
+</div>
+<div class="container">
+    <div class="center wow fadeInDown">
+        <h2>Description</h2>
+        <p class="lead"><?php echo $this->show_country_name[0]['country_description']; ?></p>
     </div>
 </div>
 <hr>
@@ -27,16 +31,15 @@
         echo '<div class="row stylish-panel">';
 
         foreach($this->show_city_country as $key => $value)
-        {   ?>    <div class="col-xs-4">
+        {   ?>   <div class="col-lg-4">
             <div class="img-holder">
-                <img src=<?php echo $value['image'];?> class="img-thumbnail img-circle" alt="user picture" width="800" height="800" style="text-align=center">
-                <a class="btn btn-default link" href="<?php echo $this->baseUrl() ?>/city/listcity/cid/<?php echo $value['city_id'];?> "> Read more>></a>
+                <img src=<?php echo $value['image'];?> class="img-thumbnail" alt="user picture" width="800" height="800" style="text-align=center">
             </div>
+            <a class="btn btn-primary link" href="<?php echo $this->baseUrl() ?>/city/listcity/cid/<?php echo $value['city_id'];?> "> Read more>></a>
+
 
         </div>
         <?php }?>
-
-        ?>
     </div>
 </div>
 <!-- /container -->
