@@ -1,5 +1,5 @@
 <body class="homepage">
-<section id="main-slider" class="no-margin">
+            <section id="main-slider" class="no-margin">
     <div class="carousel slide">
         <ol class="carousel-indicators">
             <li data-target="#main-slider" data-slide-to="0" class="active"></li>
@@ -11,14 +11,14 @@
         </ol>
         <div class="carousel-inner">
 
-            <div class="item active" style="background-image: url(/bootstrap/images/slider/egy1.jpg)">
+            <div class="item active" style="background-image: url(<?php echo $this->top_rated[0]['image']  ?>)">
                 <div class="container">
                     <div class="row slide-margin">
                         <div class="col-sm-6">
                             <div class="carousel-content">
                                 <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
                                 <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                <a class='btn-slide animation animated-item-3' href="/user-data/show-country/cuid/<?php  echo $this->top_rated[0]['country_id']?>" >Read More</a>
                             </div>
                         </div>
 
@@ -26,70 +26,70 @@
                 </div>
             </div><!--/.item-->
 
-            <div class="item" style="background-image: url(/bootstrap/images/slider/italy.jpg)">
+            <div class="item" style="background-image: url(<?php echo $this->top_rated[1]['image']  ?>)">
                 <div class="container">
                     <div class="row slide-margin">
                         <div class="col-sm-6">
                             <div class="carousel-content">
                                 <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
                                 <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                <a class='btn-slide animation animated-item-3' href="/user-data/show-country/cuid/<?php  echo $this->top_rated[1]['country_id']?>" >Read More</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div><!--/.item-->
 
-            <div class="item" style="background-image: url(/bootstrap/images/slider/canada3.jpg)">
+            <div class="item" style="background-image: url(<?php echo $this->top_rated[2]['image']  ?>)">
                 <div class="container">
                     <div class="row slide-margin">
                         <div class="col-sm-6">
                             <div class="carousel-content">
                                 <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
                                 <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                <a class='btn-slide animation animated-item-3' href="/user-data/show-country/cuid/<?php  echo $this->top_rated[2]['country_id']?>" >Read More</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div><!--/.item-->
 
-            <div class="item" style="background-image: url(/bootstrap/images/slider/turkey.jpg)">
+            <div class="item" style="background-image: url(<?php echo $this->top_rated[3]['image']  ?>)">
                 <div class="container">
                     <div class="row slide-margin">
                         <div class="col-sm-6">
                             <div class="carousel-content">
                                 <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
                                 <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                <a class='btn-slide animation animated-item-3' href="/user-data/show-country/cuid/<?php  echo $this->top_rated[3]['country_id']?>" >Read More</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div><!--/.item-->
 
-            <div class="item" style="background-image: url(/bootstrap/images/slider/spain.jpg)">
+            <div class="item" style="background-image: url(<?php echo $this->top_rated[4]['image']  ?>)">
                 <div class="container">
                     <div class="row slide-margin">
                         <div class="col-sm-6">
                             <div class="carousel-content">
                                 <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
                                 <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                <a class='btn-slide animation animated-item-3' href="/user-data/show-country/cuid/<?php  echo $this->top_rated[4]['country_id']?>" >Read More</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div><!--/.item-->
 
-            <div class="item" style="background-image: url(/bootstrap/images/slider/moroco.jpg)">
+            <div class="item" style="background-image: url(<?php echo $this->top_rated[5]['image']  ?>)">
                 <div class="container">
                     <div class="row slide-margin">
                         <div class="col-sm-6">
                             <div class="carousel-content">
                                 <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
                                 <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                 <a class='btn-slide animation animated-item-3' href="/user-data/show-country/cuid/<?php  echo $this->top_rated[5]['country_id']?>" >Read More</a>
                             </div>
                         </div>
                     </div>
@@ -205,6 +205,7 @@
     </div>
 </footer><!--/#footer-->
 
+<script src="/bootstrap/js/jquery.js"></script>
 <script src="/bootstrap/js/bootstrap.min.js"></script>
 <script src="/bootstrap/js/jquery.prettyPhoto.js"></script>
 <script src="/bootstrap/js/jquery.isotope.min.js"></script>

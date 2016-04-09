@@ -18,6 +18,17 @@ class Application_Model_Country extends Zend_Db_Table_Abstract
      					return $this->fetchAll()->toArray();
      						
 					}
+        public function find_top_rated_countries()
+                    {   
+
+                        $select = $this->select();
+                        $select->order('rate DESC');
+
+                        $resultset = $this->fetchAll($select)->toArray();
+
+                        return $resultset;
+
+                    }
 
 }
 

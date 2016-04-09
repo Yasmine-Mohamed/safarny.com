@@ -2,46 +2,44 @@
 .img-holder {position: relative;}
 .img-holder .link {
     position: absolute;
-    bottom: 25px; /*your button position*/
+    bottom: 35px; /*your button position*/
     right: 130px; /*your button position*/
-}
-</style>
-<div id="view-content">
-<div class="container">
-
-
-  <?php
-  foreach($this->show_country_name as $key => $value)
-  	{?>
-	<div class="page-header" style="margin-top:100px;">
-
-   <h1 style ="color:black ;font-size:45px;"><?php echo $this->show_country_name[0]['country_name']; ?></h1></div>
-   <div>
-   		<img src=<?php echo $this->show_country_name[0]['image'];?> class="thumbnail img-responsive" alt="user picture" width="500" height="800" style="text-align=center">
+}</style>
+<body>
+<br><br><br><br>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+   <h1 style ="color:black ;font-size:45px;"><?php echo $this->show_country_name[0]['country_name']; ?></h1>
+    <div>
+      <img src=<?php echo $this->show_country_name[0]['image'];?> class="thumbnail img-responsive" alt="user picture" width="500" height="800" style="text-align=center">
    </div>
-   <div class="row">
-   <div class="small-12 medium-7 large-7 columns">
-   <h2>Description</h2>
-   <h3 ><?php echo $this->show_country_name[0]['country_description']; ?></h3>
-   </div><?php } ?>
-   <h2>Cities</h2>
+   <h3>Description</h3>
+    <pre><?php echo $this->show_country_name[0]['country_description']; ?></pre>
+   
+  </div>
+</div>
+<hr>
 
+<div class="container">
+  <div class="container">
+    <?php
+      echo '<div class="row stylish-panel">';
 
-
-
-
-
-<div class="row">
-<?php foreach($this->show_city_country as $key => $value)
-{?>
-<div class="col-xs-4">
+foreach($this->show_city_country as $key => $value)
+{   ?>    <div class="col-xs-4">
     <div class="img-holder">
-   		<img src=<?php echo $value['image'];?> class="img-thumbnail img-circle" alt="user picture" width="800" height="800" style="text-align=center">
-   		 <a class="btn btn-default link" href="<?php echo $this->baseUrl() ?>/user/edit-details"> Read more>></a>
+      <img src=<?php echo $value['image'];?> class="img-thumbnail img-circle" alt="user picture" width="800" height="800" style="text-align=center">
+       <a class="btn btn-default link" href="<?php echo $this->baseUrl() ?>/city/listcity/cid/<?php echo $value['city_id'];?> "> Read more>></a>
    </div>
   
 </div>
 <?php }?>
+         
+    ?>
+  </div>
 </div>
-</div>
-</div>
+<!-- /container -->
+
+</body>
+

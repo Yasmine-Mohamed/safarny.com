@@ -139,7 +139,6 @@ class UserController extends Zend_Controller_Action
         $user_model = new Application_Model_User ();
         $form->removeElement('pswd');
         $form->removeElement('email');
-        $form->removeElement('reset');
         $authen_instance = Zend_Auth::getInstance();
         $storage = $authen_instance->getStorage();
         $sessionRead = $storage->read();

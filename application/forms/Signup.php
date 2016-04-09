@@ -14,13 +14,14 @@ class Application_Form_Signup extends Zend_Form
 
         $user_name->setAttribs(Array(
 			'placeholder'=>'Example: ghada',
-			'class'=>'form-control form-group'
+			'class'=>'form-control form-group color'
 		));
         $user_name->setRequired();
 		$user_name->addValidator('StringLength', false, Array(4,20));
-		
+		$user_name->getDecorator('Errors')->setOption('class', 'errors');
 
-//email
+
+
 		$email = new Zend_Form_Element_Text('email');
         $email->setAttribs(Array(
 			'placeholder'=>'Example: ahmed@gmail.com',
@@ -37,7 +38,11 @@ class Application_Form_Signup extends Zend_Form
                                 'recordFound' => 'Email already taken'
                                 ))
 			);
+        $email->getDecorator('Errors')->setOption('class', 'errors');
+        $email->setAttribs(Array(
+		'class'=>'form-control form-group color',
 
+		));
 
 		$pswd = new Zend_Form_Element_Password('pswd');
 		$pswd->setLabel('Password:');
@@ -45,6 +50,11 @@ class Application_Form_Signup extends Zend_Form
 		$pswd->setRequired(true);
 		$pswd->addValidator('StringLength', false, array(4,15));
 		$pswd->addErrorMessage('Please choose a password between 4-15 characters');
+        $pswd->getDecorator('Errors')->setOption('class', 'errors');
+        $pswd->setAttribs(Array(
+		'class'=>'form-control form-group color',
+
+		));
 
 
 		$confirmPswd = new Zend_Form_Element_Password('confirm_pswd');
@@ -53,6 +63,13 @@ class Application_Form_Signup extends Zend_Form
 		$confirmPswd->setRequired(true);
 		$confirmPswd->addValidator('Identical', false, array('token' => 'pswd'));
 		$confirmPswd->addErrorMessage('The passwords do not match');
+		$confirmPswd->getDecorator('Errors')->setOption('class', 'errors');
+		$confirmPswd->setAttribs(Array(
+		'class'=>'form-control form-group color',
+
+		));
+
+
 
 
 
@@ -82,15 +99,11 @@ class Application_Form_Signup extends Zend_Form
 ));*/
 // submit
     	$submit = new Zend_Form_Element_Submit('submit');
-    	$submit->setAttrib('class', 'btn btn-success');
+    	$submit->setAttrib('class', 'btn  btn-block btn-info');
     	
-    	//reset
-    	$reset = new Zend_Form_Element_Reset('reset');
-    	$reset->setValue('Reset');
+    	
 
-    	$reset->setAttrib('class', 'btn btn-danger');
-
-        $this->addElements(array($id,$user_name,$email,$pswd,$submit,$reset));
+        $this->addElements(array($id,$user_name,$email,$pswd,$submit));
 
     }    }
 
