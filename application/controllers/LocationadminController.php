@@ -52,14 +52,15 @@ class LocationadminController extends Zend_Controller_Action
         $location_model = new Application_Model_Location ();
         $id = $this->_request->getParam('lid');
         $location_data = $location_model->locationDetails($id);
+
         $form->populate($location_data[0]);
         $this->view->location_form = $form;
         $request = $this->getRequest();
         if ($request->isPost())
         {
             if ($form->isValid($request->getPost())) {
-                $location_model->updateLocation( $_POST);
-                $this->redirect('/locationadmin/createlocation');
+                $location_model->updateLocation($_POST);
+                //$this->redirect('/locationadmin/createlocation');
             }
         }
 

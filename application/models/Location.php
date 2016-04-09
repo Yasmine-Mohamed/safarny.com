@@ -68,12 +68,12 @@ class Application_Model_Location extends Zend_Db_Table_Abstract
 
 
     function updateLocation($locationData)
-    {
+    {   //$location_data['location_id']=$locationData['location_id'];
         $location_data['location_name']=$locationData['location_name'];
         $location_data['location_image']=$locationData['location_image'];
         $location_data['city_id']=$locationData['city_id'];
         $id=$locationData['location_id'];
-        $this->update($location_data,"id=$id");
+        $this->update($location_data,"location_id=$id");
 
     }
 
