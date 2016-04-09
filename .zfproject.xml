@@ -21,10 +21,22 @@
           <actionMethod actionName="index"/>
           <actionMethod actionName="addcarrental"/>
         </controllerFile>
+        <controllerFile controllerName="Location">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Locationadmin">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="createlocation"/>
+          <actionMethod actionName="locationdetails"/>
+          <actionMethod actionName="list"/>
+          <actionMethod actionName="delete"/>
+          <actionMethod actionName="edit"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Hotel"/>
         <formFile formName="Car"/>
+        <formFile formName="Addlocation"/>
       </formsDirectory>
       <controllersDirectory>
         <controllerFile controllerName="User">
@@ -149,7 +161,7 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Userexp">
             <viewScriptFile forActionName="editcomment"/>
-            </viewControllerScriptsDirectory>
+          </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="User">
             <viewScriptFile forActionName="editDetails"/>
           </viewControllerScriptsDirectory>
@@ -170,6 +182,27 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="UserData">
             <viewScriptFile forActionName="showCountries"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Location">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Locationadmin">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Locationadmin">
+            <viewScriptFile forActionName="createlocation"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Locationadmin">
+            <viewScriptFile forActionName="locationdetails"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Locationadmin">
+            <viewScriptFile forActionName="list"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Locationadmin">
+            <viewScriptFile forActionName="delete"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Locationadmin">
+            <viewScriptFile forActionName="edit"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
