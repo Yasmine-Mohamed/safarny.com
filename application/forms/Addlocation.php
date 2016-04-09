@@ -8,6 +8,8 @@ class Application_Form_Addlocation extends Zend_Form
         /* Form Elements & Other Definitions Here ... */
         $this->setMethod('POST');
 
+        $location_id=new Zend_Form_Element_Hidden('location_id');
+
         $location_name = new Zend_Form_Element_Text('location_name');
         $location_name->setLabel('Location Name: ');
         $location_name->setAttribs(Array(
