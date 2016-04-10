@@ -1,5 +1,11 @@
 <!-- Page Content -->
-
+<style>
+	body{
+		background-image: url('/bootstrap/images/admin/sea.jpg');
+		background-size: cover;
+	}
+</style>
+<body class="body">
 <?php
 
 	$authen = Zend_Auth::getInstance();
@@ -15,7 +21,7 @@
 	<div class="row">
 
 		<!-- Blog Post Content Column -->
-		<div class="panel panel-danger col-lg-offset-2 col-lg-8 col-lg-offset-2">
+		<div class="post col-lg-offset-2 col-lg-8 col-lg-offset-2">
 
 			<!-- Blog Post -->
 
@@ -95,3 +101,4 @@
 
 		</div>
 		<script src="/bootstrap/js/addComment.js"></script>
+</body>

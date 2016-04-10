@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <style>
 	h1,h2{
 		color:black;
@@ -16,6 +17,13 @@
 		</div>
 
 		<?php
+=======
+<body style="background-image: url('/bootstrap/images/user-profile.jpg');"
+<div id="view-content">
+<div class="container">
+	<br><br><br><br><br>
+	<?php
+>>>>>>> b154d0b11e785d00518e23f7c17d3ec8027d8465
 		$authen_instance = Zend_Auth::getInstance();
 		$storage = $authen_instance->getStorage();
 		$sessionRead = $storage->read();
@@ -23,6 +31,7 @@
 			$name = $sessionRead->user_name;
 			$email = $sessionRead->email;
 
+<<<<<<< HEAD
 			?>
 
 
@@ -105,4 +114,58 @@
 
 </div>
 </div>
+=======
+            ?>
+				    Name:<?php echo $name;?>
+           		<br> Email:<?php echo $email;?>
+      
+           			 <br>
+
+           <a class="btn btn-primary" href="<?php echo $this->baseUrl() ?>/user/edit-details"> Edit Profile</a>
+           
+           		<?php } ?>
+			</div>
+			<br><br>
+		<div class="panel-title"><h2 align="center">Reservation</h2></div>
+				 <table class="table table-striped table-bordered table-hover info text-info ">
+			 		<tr>
+						<th>Date-from</th><th>Date-To</th><th>Pickup-Location</th><th>City</th></tr>
+							<?php
+							$i=0;
+							foreach($this->showCar as $key => $value)
+								{
+									echo "<tr>".
+
+									"<td>" . $value["date_from"] . "</td>" .
+									"<td>" . $value["date_to"] . "</td> ".
+									"<td>" . $value["pickup_location"] . "</td>".
+									"<td>" . $this->showCity[$i]['city_name']. "</td>".
+									"</tr>";
+									$i=$i+1;
+									}
+								?>
+				</table>
+		<hr>
+				<table class="table table-striped table-bordered table-hover info text-info ">
+
+					<tr>
+						<th>Hotel Name</th><th>Date-From</th><th>Date-To</th><th>Members</th><th>City</th>
+					</tr>
+					<?php
+					$i=0;	
+					foreach($this->showHotel as $key => $value)
+						{
+							echo "<tr>".
+
+							"<td>" . $this->showHotelName[$i]['hotel_name'] ."</td>" .
+							"<td>" . $value["date_from"] . "</td>" .
+							"<td>" . $value["date_to"] . "</td> ".
+							"<td>" . $value["members"] . "</td> ".
+							"<td>".$this->showHotelCity[$i]['city_name']."<td>".
+							"</tr>";
+							$i=$i+1;}
+							?>
+				</table>
+		  </div>
+>>>>>>> b154d0b11e785d00518e23f7c17d3ec8027d8465
 </body>

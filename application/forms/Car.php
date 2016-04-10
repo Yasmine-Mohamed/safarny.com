@@ -34,7 +34,7 @@ class Application_Form_Car extends Zend_Form
         //to submit form
         $submit=new Zend_Form_Element_Submit('GetYourQuote');
         $submit->setAttribs(Array(
-            'class'=>'btn btn-block btn-lg btn-success'
+            'class'=>'btn btn-block btn-lg btn-primary'
         ));
 
         $this->addElements(array($date_from,$date_to,$submit));

@@ -30,7 +30,7 @@ class Application_Form_Login extends Zend_Form
 
         //Submit Button
         $submit = new Zend_Form_Element_Submit('Login');
-        $submit->setAttrib('class','btn  btn-lg btn-block btn-transparent');
+        $submit->setAttrib('class','btn  btn-lg btn-block btn-primary');
 
         $this->addElements(array(
             $username,

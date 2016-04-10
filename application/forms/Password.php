@@ -28,11 +28,13 @@ class Application_Form_Password extends Zend_Form
 		$confirmPswd->setRequired(true);
 		$confirmPswd->addValidator('Identical', false, array('token' => 'pswd'));
 		$confirmPswd->addErrorMessage('The passwords do not match');
+
 		$submit = new Zend_Form_Element_Submit('password_submit');
 		$submit->setAttrib('class', 'btn btn-block btn-info');
 		$confirmPswd->getDecorator('Errors')->setOption('class', 'errors');
 		$confirmPswd->setAttribs(Array(
 			'class'=>'form-control form-group color',
+
 
 		));
 		$this->addElements(array($pswd,$confirmPswd,$submit));

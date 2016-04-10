@@ -5,6 +5,7 @@ class Application_Form_Signup extends Zend_Form
 
 		public function init()
     	{
+
 			/* Form Elements & Other Definitions Here ... */
 			$this->setMethod('POST');
 
@@ -14,19 +15,17 @@ class Application_Form_Signup extends Zend_Form
 
 			$user_name->setAttribs(Array(
 				'placeholder'=>'Example: ghada',
-				'class'=>'form-control form-group color'
-			));
+				'class'=>'form-control form-group color'));
+
+            /* Form Elements & Other Definitions Here ... */
+
 			$user_name->setRequired();
 			$user_name->addValidator('StringLength', false, Array(4,20));
 			$user_name->getDecorator('Errors')->setOption('class', 'errors');
 
 
-
 			$email = new Zend_Form_Element_Text('email');
-			$email->setAttribs(Array(
-				'placeholder'=>'Example: ahmed@gmail.com',
-				'class'=>'form-control'
-			));
+
 			$email->setLabel('email');
 			$email->setRequired();
 			$email->addValidator('StringLength', false, Array(10,50));
@@ -40,6 +39,7 @@ class Application_Form_Signup extends Zend_Form
 			);
 			$email->getDecorator('Errors')->setOption('class', 'errors');
 			$email->setAttribs(Array(
+				'placeholder'=>'Example: ahmed@gmail.com',
 				'class'=>'form-control form-group color',
 
 			));
@@ -69,35 +69,6 @@ class Application_Form_Signup extends Zend_Form
 
 			));
 
-
-
-
-
-
-			/*		$gender = new Zend_Form_Element_Radio('gender');
-                    $gender->setLabel('gender');
-
-                    $gender->setRequired();
-                    $gender->addMultiOption('male','Male')->
-                    addMultiOption('female','Female')->
-                    addMultiOption('non','Prefer not to mention');
-                    $gender->setAttrib('class', 'form-group');
-
-                    $track_obj = new Application_Model_Track();
-                    $allTracks = $track_obj->listAll();
-                    $track = new Zend_Form_Element_Select('track');
-                    $track->setLabel('track');
-
-                    foreach($allTracks as $key=>$value)
-                        {
-                            $track->addMultiOption($value['id'], $value['track_name']);
-                        }
-
-             $track->setAttribs(Array(
-            'placeholder'=>'choose track',
-            'class'=>'form-control'
-            ));*/
-// submit
 			$submit = new Zend_Form_Element_Submit('submit');
 			$submit->setAttrib('class', 'btn  btn-block btn-info');
 
