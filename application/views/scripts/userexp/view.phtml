@@ -11,11 +11,14 @@
 	$authen = Zend_Auth::getInstance();
 	$storage = $authen->getStorage();
 	$session_read = $storage->read();
-	$user_id = $session_read->user_id;
+	if(!empty($session_read)){
+		$user_id = $session_read->user_id;
+		$user_name = $session_read->user_name;
+	}
 
 ?>
 
-<br><br><br><br><br>
+<input id="user_name" type="hidden" value="<?php if (!empty($session_read)){echo $user_name;} ?>">
 <div class="container">
 
 	<div class="row">
@@ -25,24 +28,34 @@
 
 			<!-- Blog Post -->
 
+			<br>
 			<!-- Title -->
-			<h1><?php echo $this->experience['post_title'] ?></h1>
+			<div id="post_title">
+				<h1><?php echo $this->experience['post_title'] ?></h1>
+			</div>
 			<input type="hidden" id="post_id" value="<?php echo $this->experience['post_id'] ; ?>">
-			<input type="hidden" id="user_id" value="<?php echo $user_id; ?>">
+			<input type="hidden" id="user_id" value="<?php if (!empty($user_id)){echo $user_id;} ?>">
+			<br>
+			<br>
 
 			<!-- Author -->
 			<p class="lead">
-				by <a><?php echo $this->experience['user_id'] ?></a>
+				by <a><?php //echo $this->experience['user_id']
+						$user_model_object = new Application_Model_User();
+						$user_name = json_decode($user_model_object->getUsername($this->experience['user_id']),true);
+						echo $user_name['user_name'];
+					// ?>
+				   </a>
 			</p>
 
 			<p>
 			<?php
-			$authen = Zend_Auth::getInstance();
-			$storage = $authen->getStorage();
-			$session_read = $storage->read();
-			$user_id = $session_read->user_id;
-			if($user_id === $this->experience['user_id']){
-				echo '<a class="btn btn-danger" href="/userexp/removeexp/eid/'.$this->experience['post_id'].'" role="button">Delete</a>';
+			if(!empty($session_read)){
+				$user_id = $session_read->user_id;
+				if($user_id === $this->experience['user_id']){
+					echo '<a id="delete_post_button" class="btn btn-danger" href="/userexp/removeexp/eid/'.$this->experience['post_id'].'" role="button"><span class="glyphicon glyphicon-remove"></span> Delete</a>';
+					echo '<span>  </span><button class="btn btn-success" id="edit_user_exp"><span class="glyphicon glyphicon-edit"></span> Update</button>';
+				}
 			}
 			?>
 			</p>
@@ -54,7 +67,10 @@
 			<hr>
 
 			<!-- Post Content -->
-			<pre class="lead"><?php echo $this->experience['post']; ?></pre>
+			<div id="post_desc" class="container-fluid">
+				<p class="lead"><?php echo $this->experience['post']; ?></p>
+			</div>
+
 
 			<hr>
 
@@ -66,21 +82,29 @@
 			<div id="comments_section" class="container-fluid">
 				<?php
 
+					$user_model_object = new Application_Model_User();
+
 					foreach($this->comments as $comment){
+
+						$user_name = json_decode($user_model_object->getUsername($comment['user_id']),true);
+
 						echo '<div comment_id="'.$comment['comment_id'].'" class="comment media">
 								<a class="pull-left" href="#">
 									<img class="media-object" src="http://placehold.it/64x64" alt="">
 								</a>
 						  		<div class="media-body">
-									<h4 class="media-heading">'.$comment['user_id'].'
+									<h4 class="media-heading">'.$user_name['user_name'].'
 										<small>August 25, 2014 at 9:30 PM</small>
 									</h4><p class="comment_value">'.$comment['comment']
 								.'</p></div>';
 
-						if($user_id === $comment['user_id']) {
-							echo '<button class="btn btn-danger delete_comment_button btn-xs"><span class="glyphicon glyphicon-remove"></span></button>';
-							echo ' <button class="btn btn-success update_comment_button btn-xs"><span class="glyphicon glyphicon-edit"></span></button>';
+						if(!empty($session_read)){
+							if($user_id === $comment['user_id']) {
+								echo '<button class="btn btn-danger delete_comment_button btn-xs"><span class="glyphicon glyphicon-remove"></span></button>';
+								echo ' <button class="btn btn-success update_comment_button btn-xs"><span class="glyphicon glyphicon-edit"></span></button>';
 							}
+
+						}
 							echo '</div>';
 				}
 			?>
@@ -88,17 +112,27 @@
 			<hr>
 			<br>
 			<!-- Comments Form -->
-			<div class="well">
-				<h4>Leave a Comment:</h4>
-				<div role="form">
-					<div class="form-group">
-						<textarea id="commentText" class="form-control" rows="3"></textarea>
+			<?php
+			if(!empty($session_read)) {
+
+				?>
+
+				<div class="well">
+					<h4>Leave a Comment:</h4>
+					<div role="form">
+						<div class="form-group">
+							<textarea id="commentText" class="form-control" rows="3"></textarea>
+						</div>
+						<button id="addComment_button" class="btn btn-primary">Submit</button>
 					</div>
-					<button id="addComment_button" class="btn btn-primary">Submit</button>
 				</div>
-			</div>
-			<hr>
+				<hr>
+				<?php
+			}
+			?>
 
 		</div>
 		<script src="/bootstrap/js/addComment.js"></script>
+		<script src="/bootstrap/js/edit_userexp.js"></script>
+
 </body>

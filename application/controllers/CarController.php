@@ -36,5 +36,6 @@ class CarController extends Zend_Controller_Action
         $this->view->city_id=$city_id;
         $this->view->car_form = $form;
 
+
     }
 }

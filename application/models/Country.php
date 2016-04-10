@@ -50,6 +50,18 @@ class Application_Model_Country extends Zend_Db_Table_Abstract
 		$this->delete("country_id=$id");
 	}
 
+	public function find_top_rated_countries()
+	{
+
+		$select = $this->select();
+		$select->order('rate DESC');
+
+		$resultset = $this->fetchAll($select)->toArray();
+
+		return $resultset;
+
+	}
+
 
 }
 

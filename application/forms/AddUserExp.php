@@ -31,13 +31,13 @@ class Application_Form_AddUserExp extends Zend_Form
 
 
         //Submit Button
-        $submit = new Zend_Form_Element_Submit('ShareExperience');
-        $submit->setAttrib('class','btn btn-success btn-lg');
+//        $submit = new Zend_Form_Element_Submit('ShareExperience');
+//        $submit->setAttrib('class','btn btn-success btn-lg');
 
         $this->addElements(array(
             $u_title,
             $u_desc,
-            $submit
+            //$submit
         ));
     }
 
