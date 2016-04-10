@@ -43,8 +43,8 @@ class Application_Model_User extends Zend_Db_Table_Abstract
 
 	public function getUsername($id){
 		$dbhost = 'localhost';
-		$dbuser = 'root';
-		$dbpass = 'ahh2010';
+		$dbuser = 'zend';
+		$dbpass = 'zend';
 		$dbname = 'safarny';
 
 		$con = new mysqli($dbhost,$dbuser,$dbpass,$dbname);

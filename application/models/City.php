@@ -58,7 +58,17 @@ class Application_Model_City extends Zend_Db_Table_Abstract
         $this->delete("city_id=$id");
     }
 
+    public function find_top_rated_cities()
+    {
 
+        $select = $this->select();
+        $select->order('rate DESC');
+
+        $resultset = $this->fetchAll($select)->toArray();
+
+        return $resultset;
+
+    }
 
 }
 

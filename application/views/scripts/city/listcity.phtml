@@ -1,8 +1,12 @@
-
-<body>
+<style>
+	body{
+		background-size: cover;
+	}
+</style>
+<br><br><br>
+<body style="background-image: url('<?php echo $this->city['image']; ?>')">
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <input id="city_id" type="hidden" value="<?php echo $this->city['city_id']; ?>">
-<div class="jumbotron" style="background-image: url('/bootstrap/images/cities/alex.jpg')">
 	<div class="container">
 		<br>
 		<h1><?php echo $this->city['city_name']; ?></h1>
@@ -10,7 +14,7 @@
 			<p><?php echo $this->city['description'] ?></p>
 		</div>
 	</div>
-</div>
+
 
 <?php
 	if(!empty($this->experiences)){
