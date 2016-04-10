@@ -9,6 +9,7 @@
       <controllersDirectory>
         <controllerFile controllerName="Index">
           <actionMethod actionName="index"/>
+          <actionMethod actionName="signup"/>
           <actionMethod actionName="addNewHotelReservation"/>
           <actionMethod actionName="edit"/>
         </controllerFile>
@@ -22,18 +23,51 @@
           <actionMethod actionName="index"/>
           <actionMethod actionName="addcarrental"/>
         </controllerFile>
+<<<<<<< HEAD
         <controllerFile controllerName="AdminHotel">
           <actionMethod actionName="index"/>
           <actionMethod actionName="edit"/>
           <actionMethod actionName="list"/>
           <actionMethod actionName="delete"/>
           <actionMethod actionName="add"/>
+=======
+
+        <controllerFile controllerName="Location">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Locationadmin">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="createlocation"/>
+          <actionMethod actionName="locationdetails"/>
+          <actionMethod actionName="list"/>
+          <actionMethod actionName="delete"/>
+          <actionMethod actionName="edit"/>
+          </controllerFile>
+
+        <controllerFile controllerName="Admin">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="list"/>
+          <actionMethod actionName="delete"/>
+          <actionMethod actionName="edit"/>
+          <actionMethod actionName="listCities"/>
+          <actionMethod actionName="editCity"/>
+          <actionMethod actionName="deleteCity"/>
+
+>>>>>>> b946f477b75f6f86d3477479d6bdfc1f8aefdd6a
         </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Hotel"/>
         <formFile formName="Car"/>
+<<<<<<< HEAD
         <formFile formName="AdminHotel"/>
+=======
+
+        <formFile formName="Addlocation"/>
+        <formFile formName="AddCountry"/>
+        <formFile formName="AddCity"/>
+
+>>>>>>> b946f477b75f6f86d3477479d6bdfc1f8aefdd6a
       </formsDirectory>
       <controllersDirectory>
         <controllerFile controllerName="User">
@@ -42,6 +76,16 @@
           <actionMethod actionName="logout"/>
           <actionMethod actionName="fblogin"/>
           <actionMethod actionName="fblogout"/>
+          <actionMethod actionName="signup"/>
+        </controllerFile>
+        <controllerFile controllerName="Admin">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="listCountry"/>
+          <actionMethod actionName="listCountries"/>
+          <actionMethod actionName="list"/>
+          <actionMethod actionName="add"/>
+          <actionMethod actionName="delete"/>
+          <actionMethod actionName="edit"/>
           <actionMethod actionName="editDetails"/>
         </controllerFile>
         <controllerFile controllerName="UserData">
@@ -67,6 +111,8 @@
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Login"/>
+        <formFile formName="SignUp"/>
+        <formFile formName="AddCountry"/>
         <formFile formName="AddUserExp"/>
         <formFile formName="Signup"/>
         <formFile formName="Password"/>
@@ -80,6 +126,8 @@
         <modelFile modelName="Hotel"/>
         <modelFile modelName="Car"/>
         <modelFile modelName="User"/>
+        <modelFile modelName="Country"/>
+        <modelFile modelName="City"/>
         <modelFile modelName="City"/>
         <modelFile modelName="UserExp"/>
         <modelFile modelName="Comment"/>
@@ -135,6 +183,33 @@
           <viewControllerScriptsDirectory forControllerName="User">
             <viewScriptFile forActionName="fblogout"/>
           </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="signup"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="User">
+            <viewScriptFile forActionName="signup"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="listCountry"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="listCountries"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="list"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="add"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="delete"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="edit"/>
+          </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="City">
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
@@ -180,6 +255,7 @@
           <viewControllerScriptsDirectory forControllerName="UserData">
             <viewScriptFile forActionName="showCountries"/>
           </viewControllerScriptsDirectory>
+<<<<<<< HEAD
           <viewControllerScriptsDirectory forControllerName="AdminHotel">
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
@@ -198,6 +274,52 @@
           <viewControllerScriptsDirectory forControllerName="AdminHotel">
             <viewScriptFile forActionName="add"/>
           </viewControllerScriptsDirectory>
+=======
+
+          <viewControllerScriptsDirectory forControllerName="Location">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Locationadmin">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Locationadmin">
+            <viewScriptFile forActionName="createlocation"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Locationadmin">
+            <viewScriptFile forActionName="locationdetails"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Locationadmin">
+            <viewScriptFile forActionName="list"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Locationadmin">
+            <viewScriptFile forActionName="delete"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Locationadmin">
+            <viewScriptFile forActionName="edit"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="list"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="delete"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="edit"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="listCities"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="editCity"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="deleteCity"/>
+          </viewControllerScriptsDirectory>
+
+>>>>>>> b946f477b75f6f86d3477479d6bdfc1f8aefdd6a
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
         <viewFiltersDirectory enabled="false"/>

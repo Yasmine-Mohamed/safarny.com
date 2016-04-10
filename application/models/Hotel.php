@@ -59,13 +59,16 @@ class Application_Model_Hotel extends Zend_Db_Table_Abstract
     {
         // return zend row object
         $all = $this->fetchAll("user_id=$user_id");
-        $hotelName=[];
+        //$hotelName=[];
+        $cityHotel = [];
 
         foreach($all as $i => $row)
         {
             $cityHotel[] = $row->findParentRow('Application_Model_City')->toArray();
         				# code...
         }
+
+        //var_dump($cityHotel);exit();
 
         return $cityHotel;
 

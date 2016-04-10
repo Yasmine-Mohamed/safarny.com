@@ -25,7 +25,8 @@ class Application_Model_HotelName extends Zend_Db_Table_Abstract
         return $this->find($id)->toArray();
     }
 
-	public function list_Hotels()
+
+    function listHotels($city_id)
 
     {
         return $this->fetchAll()->toArray();
@@ -56,14 +57,7 @@ class Application_Model_HotelName extends Zend_Db_Table_Abstract
 
 		}
 
-	public function update_hotel($hotel_id,$hotelData)
 
-		{
-        	$hotel['hotel_name'] = $hotelData['hotel_name'];
-        	$hotel['hotel_id']=$hotelData['hotel_id'];
-        	$city_id = $hotel_data['city_id'];
-            $this->update($hotel,"hotel_id=$hotel_id");
-		}
 					
 	public function delete_hotels($id)
 		{
@@ -71,7 +65,32 @@ class Application_Model_HotelName extends Zend_Db_Table_Abstract
 		}
 
 
-					  
+
+
+    public function list_Hotels()
+
+    {
+        return $this->fetchAll()->toArray();
+    }
+
+
+
+
+    public function update_hotel($hotel_id,$hotelData)
+
+    {
+        $hotel['hotel_name'] = $hotelData['hotel_name'];
+        $hotel['hotel_id']=$hotelData['hotel_id'];
+        $city_id = $hotelData['city_id'];
+        $this->update($hotel,"hotel_id=$hotel_id");
+    }
+
+
+
+
+
+
+
 
 
 

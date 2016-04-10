@@ -1,0 +1,39 @@
+<br><br><br><br><br>
+<style>
+	body{
+		background-image: url('/bootstrap/images/admin/dsc_0212.jpg');
+		background-size: cover;
+	}
+</style>
+<body class="body">
+<div class="container">
+	<table class="table table-responsive">
+		<?php
+		echo "<tr>".
+			"<th>Country Name</th>".
+			"<th>Description</th>".
+			"<th>Rate</th>".
+			"<th>Image</th>".
+			"<th>Action</th>".
+			"<th></th>".
+			"</tr>";
+		foreach($this->countries as $key => $value)
+		{
+			echo
+				"<tr>".
+				"<td>" . $value['country_name'] . "</td>" .
+				"<td>" . $value['country_description'] . "</td>" .
+				"<td>" . $value['rate'] . "</td>" .
+				"<td><img src='" . $value['image'] . "' height='100' width='150'></td>" .
+				"<td> <a class='btn btn-danger' href='delete/cid/".$value['country_id']."'> Delete </a> </td>".
+				"<td> <a class='btn btn-warning' href='edit/cid/".$value['country_id']."'> Edit </a> </td>"
+				."</tr>";
+		}
+		?>
+	</table>
+</div>
+<?php
+echo $this->add_country;
+
+?>
+</body>

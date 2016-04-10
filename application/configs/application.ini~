@@ -11,8 +11,13 @@ resources.frontController.params.displayExceptions = 0
 resources.db.adapter = "PDO_MYSQL"
 resources.db.params.dbname = "safarny"
 resources.db.params.host = "localhost"
+<<<<<<< HEAD
 resources.db.params.username = "zend"
 resources.db.params.password = "zend"
+=======
+resources.db.params.username = "root"
+resources.db.params.password = "ahh2010"
+>>>>>>> b946f477b75f6f86d3477479d6bdfc1f8aefdd6a
 
 resources.layout.layoutPath = APPLICATION_PATH "/layouts/scripts/"
 [staging : production]

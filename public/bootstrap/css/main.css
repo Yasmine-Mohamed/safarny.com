@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800);
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800);*/
 
 
 /*************************
@@ -7,7 +7,7 @@
 
 body {
   background: #fff;
-  font-family: '',"mry_KacstQurn";
+  font-family: '',"Ubuntu Light";
   color: #953b39;
   line-height: 22px;
 
@@ -20,7 +20,7 @@ h4,
 h5,
 h6 {
   font-weight: 600; 
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Ubuntu', "Ubuntu Condensed";
   color:#4e4e4e;
 }
 
@@ -46,7 +46,7 @@ h4{
 }
 
 a {
-  color: #FFFFFF;
+  color: black;
   -webkit-transition: color 300ms, background-color 300ms;
   -moz-transition: color 300ms, background-color 300ms;
   -o-transition:  color 300ms, background-color 300ms;
@@ -172,6 +172,18 @@ body > section {
   }
 }
 
+.post {
+  position: relative;
+  height: 100%;
+  background: -webkit-linear-gradient(top, rgb(206, 238, 255) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: linear-gradient(to bottom, rgba(206, 238, 255, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%);
+  -webkit-transition: opacity 0.1s, -webkit-transform 0.3s cubic-bezier(0.17, -0.65, 0.665, 1.25);
+  transition: opacity 0.1s, -webkit-transform 0.3s cubic-bezier(0.17, -0.65, 0.665, 1.25);
+  transition: opacity 0.1s, transform 0.3s cubic-bezier(0.17, -0.65, 0.665, 1.25);
+  transition: opacity 0.1s, transform 0.3s cubic-bezier(0.17, -0.65, 0.665, 1.25), -webkit-transform 0.3s cubic-bezier(0.17, -0.65, 0.665, 1.25);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
 
 /*************************
 *******Header******
@@ -372,8 +384,8 @@ input.search-form:hover {
 }
 
 .no-margin {
-  margin: 20;
-  padding: 20;
+  margin: 0px;
+  padding: 0px;
 }
 
 #main-slider .carousel .carousel-content {

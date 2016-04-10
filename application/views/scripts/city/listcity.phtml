@@ -1,28 +1,47 @@
-
-<body>
-<br><br><br><br>
+<style>
+	body{
+		background-size: cover;
+	}
+</style>
+<br><br><br>
+<body style="background-image: url('<?php echo $this->city['image']; ?>')">
 <!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
+<input id="city_id" type="hidden" value="<?php echo $this->city['city_id']; ?>">
 	<div class="container">
+		<br>
 		<h1><?php echo $this->city['city_name']; ?></h1>
-		<pre><?php echo $this->city['description'] ?></pre>
-		<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+		<div class="container-fluid">
+			<p><?php echo $this->city['description'] ?></p>
+		</div>
 	</div>
-</div>
 
+
+<?php
+	if(!empty($this->experiences)){
+
+?>
 <div class="container">
 	<div class="container">
+		<div class="col-xs-12">
+			<h2 align="center" style="font-family: 'Ubuntu Light'"></i>Experiences about this City </h2>
+			<hr>
+		</div>
 		<?php
+
+		$user_model_object = new Application_Model_User();
+
 		$exp_index = 0;
 		for($i=0;$i< ceil(count($this->experiences)/3);$i++){
 			echo '<div class="row stylish-panel">';
-
 			for($exp_index;$exp_index < count($this->experiences);$exp_index++){
+
+				$user_name = json_decode($user_model_object->getUsername($this->experiences[$exp_index]['user_id']),true);
+
 				echo '<div class="col-md-4">
 							<div>
-								<h2>'.$this->experiences[$exp_index]['user_id'].'</h2>
+								<h2>'.$user_name['user_name'].'</h2>
 								<p>'.$this->experiences[$exp_index]['post_title'].'</p>
-								<a href="/userexp/view/eid/'.$this->experiences[$exp_index]['post_id'].'" class="btn btn-default" title="See more">See Experience »</a>
+								<a href="/userexp/view/eid/'.$this->experiences[$exp_index]['post_id'].'" class="btn btn-primary" title="See more">See Experience »</a>
 							</div>
 						</div>';
 			}
@@ -35,24 +54,76 @@
 </div>
 <!-- /container -->
 <hr>
-<div class="container">
-	<div class="row">
-		<div class="col-lg-offset-2 col-lg-8 col-lg-offset-2">
-			<form method="post">
-				<?php
-				echo $this->UserExp_Form->getElement('post_title');
-				echo '<br>';
-				echo $this->UserExp_Form->getElement('post_desc');
-				echo '<br>';
-				echo $this->UserExp_Form->getElement('ShareExperience');
-				echo '<br>';
-				?>
-			</form>
+<?php
+	}
+?>
 
+<?php
+
+	$authen = Zend_Auth::getInstance();
+	$storage = $authen->getStorage();
+	$session_read = $storage->read();
+	if(!empty($session_read)){
+
+		?>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<h2 align="center" style="font-family: 'Ubuntu Light'"></i> Got an Experience with this City, Share
+						it with us</h2>
+					<hr>
+				</div>
+				<br>
+				<div class="col-lg-offset-2 col-lg-8 col-lg-offset-2">
+					<form method="post">
+						<?php
+						echo $this->UserExp_Form->getElement('post_title');
+						echo '<br>';
+						echo $this->UserExp_Form->getElement('post_desc');
+						echo '<br>';
+						?>
+						<button class="btn btn-success btn-lg" type="submit"><i class="glyphicon glyphicon-send"></i>
+							Share your experience
+						</button>
+					</form>
+				</div>
+			</div>
 		</div>
-</div>
-</div>
-<hr>
+		<hr>
+		<?php
+	}
+		?>
 
+<br>
+
+
+<div class="container" style="border: 1px;">
+	<h2 align="center" style="font-family: 'Ubuntu Light'"><i class="glyphicon glyphicon-map-marker"></i>  Checkout <?php echo $this->city['city_name']; ?> on Google Maps</h2>
+	<hr>
+	<div id="map" class="container" style="width: 800px;height:400px;background-color: #CCC;">
+	</div>
+</div>
+
+
+
+<script>
+	function initMap() {
+		var mapDiv = document.getElementById('map');
+		var myLatLng = {lat:<?php echo $this->city['lat']; ?>, lng: <?php echo $this->city['long']; ?>};
+		var map = new google.maps.Map(mapDiv, {
+			center: myLatLng,
+			zoom: 8
+		});
+		var marker = new google.maps.Marker({
+			position: myLatLng,
+			map: map,
+			title: '<?php echo $this->city['city_name']; ?>'
+		});
+	}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8qj-3E6nRcvPyJP9DwpAZ3Xr_iSq_ot8&callback=initMap"
+		async defer></script>
+<script src="/bootstrap/js/navbar.js"></script>
 </body>
 
